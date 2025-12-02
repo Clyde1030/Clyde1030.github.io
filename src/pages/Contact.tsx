@@ -20,8 +20,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
-      href: "https://linkedin.com/in/yourprofile",
+      value: "linkedin.com/in/yushengclydelee",
+      href: "https://www.linkedin.com/in/yushengclydelee/",
     },
     {
       icon: Github,
