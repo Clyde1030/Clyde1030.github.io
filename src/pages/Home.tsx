@@ -21,8 +21,13 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8">
-          <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+          <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
             <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-fill" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <h2 className="text-3xl md:text-5xl font-bold text-white text-center px-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                Data Scientist | Driving Insight Through Data
+              </h2>
+            </div>
           </div>
           
           {scrollProgress < 0.2 && <div className="animate-bounce">
