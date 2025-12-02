@@ -22,8 +22,8 @@ const Home = () => {
     }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
-        <div className="relative z-10 flex flex-col items-center gap-8 w-full px-4">
-          <div className="relative w-full max-w-7xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+        <div className="relative z-10 flex flex-col items-center gap-8 w-full">
+          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
             <img alt="Data Science Workspace" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" className="w-full h-auto border-0 opacity-85 object-cover" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
