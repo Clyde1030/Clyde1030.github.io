@@ -20,8 +20,8 @@ const Home = () => {
     }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
-        <div className="relative z-10 flex flex-col items-center gap-8">
-          <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+        <div className="relative z-10 flex flex-col items-center gap-8 max-w-4xl mx-auto px-4">
+          <div className="relative w-full rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
             <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-fill" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
@@ -34,58 +34,45 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className="text-center space-y-6">
+            <p className="text-lg text-white/90 max-w-2xl mx-auto drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+              Welcome to my portfolio. I'm a passionate data science student specializing in 
+              machine learning, data engineering, and analytical solutions.
+            </p>
+
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Link to="/projects">
+                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
+                  View Projects
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                  Get in Touch
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex gap-6 justify-center">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <Github className="w-6 h-6" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-primary transition-colors">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="mailto:your.email@example.com" className="text-white/80 hover:text-primary transition-colors">
+                <Mail className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
           
           {scrollProgress < 0.2 && <div className="animate-bounce">
-              <ChevronDown className="w-8 h-8 text-muted-foreground" />
+              <ChevronDown className="w-8 h-8 text-white/60" />
             </div>}
         </div>
       </section>
 
-      {/* Content Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 -mt-screen" style={{
-      opacity: contentOpacity,
-      transform: `translateY(${contentTranslateY}px)`,
-      transition: 'transform 0.1s ease-out'
-    }}>
-        <div className="max-w-4xl w-full text-center space-y-8">
-          <div className="space-y-4">
-            
-            
-          </div>
-
-          <div className="max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-foreground/90">
-              Welcome to my portfolio. I'm a passionate data science student specializing in 
-              machine learning, data engineering, and analytical solutions.
-            </p>
-          </div>
-
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link to="/projects">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
-                View Projects
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                Get in Touch
-              </Button>
-            </Link>
-          </div>
-
-          <div className="flex gap-6 justify-center pt-8">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="mailto:your.email@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
-        </div>
-      </section>
     </div>;
 };
 export default Home;
