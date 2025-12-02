@@ -1,8 +1,15 @@
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, Github, MapPin } from "lucide-react";
+import { Mail, Linkedin, Github, MapPin, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 const Contact = () => {
+  const scrollProgress = useScrollProgress();
+  
+  // Calculate opacities based on scroll progress
+  const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
+  const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
+  
   const contactMethods = [
     {
       icon: Mail,
@@ -31,14 +38,44 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen py-24 px-4">
-      <div className="container mx-auto max-w-4xl space-y-12 animate-slide-up">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            I'm always interested in new opportunities and collaborations
-          </p>
+    <div className="min-h-screen">
+      {/* Hero section with scroll effect */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Image section that fades out */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
+          style={{ 
+            opacity: imageOpacity,
+            transform: `scale(${0.95 + imageOpacity * 0.05})`
+          }}
+        >
+          <div className="text-center space-y-6 px-4">
+            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border-2 border-primary/20">
+              <Mail className="w-24 h-24 text-primary" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold">Contact</h1>
+          </div>
         </div>
+
+        {/* Content section that fades in */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
+          style={{ 
+            opacity: contentOpacity,
+            transform: `translateY(${(1 - contentOpacity) * 20}px)`
+          }}
+        >
+          <div className="text-center space-y-4 px-4 max-w-3xl">
+            <h2 className="text-4xl md:text-5xl font-bold">Get in Touch</h2>
+            <p className="text-xl text-muted-foreground">
+              I'm always interested in new opportunities, collaborations, and interesting conversations
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Content */}
+      <div className="container mx-auto max-w-4xl space-y-12 px-4 py-16">
 
         <Card className="p-8 md:p-12 bg-card border-border">
           <div className="space-y-8">
@@ -78,6 +115,30 @@ const Contact = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* Resume Download Box */}
+              <div className="p-6 rounded-lg bg-secondary/50 border border-border hover:border-primary transition-colors group md:col-span-2">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <FileDown className="w-5 h-5" />
+                    </div>
+                    <div className="space-y-1">
+                      <p className="text-sm text-muted-foreground">Resume</p>
+                      <p className="font-mono text-sm">Download my CV/Resume</p>
+                    </div>
+                  </div>
+                  <a href="/resume.pdf" download>
+                    <Button 
+                      variant="outline"
+                      className="border-primary text-primary hover:bg-primary/10"
+                    >
+                      <FileDown className="w-4 h-4 mr-2" />
+                      Download
+                    </Button>
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="text-center pt-4">
