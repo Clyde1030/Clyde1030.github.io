@@ -16,10 +16,10 @@ const Projects = () => {
   return (
     <div className="min-h-screen">
       {/* Hero section with scroll effect */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative overflow-hidden">
         {/* Image section that fades out */}
         <div 
-          className="absolute inset-0 transition-all duration-300"
+          className="relative h-[60vh] transition-all duration-300"
           style={{ 
             opacity: imageOpacity
           }}
@@ -29,20 +29,22 @@ const Projects = () => {
             alt="Projects illustration showing data science concepts" 
             className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 flex items-start justify-center pt-[45vh]">
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground drop-shadow-lg">My Projects</h1>
-          </div>
+        </div>
+
+        {/* Title below image */}
+        <div className="text-center py-12">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground">My Projects</h1>
         </div>
 
         {/* Content section that fades in */}
         <div 
-          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
+          className="text-center transition-all duration-300 pb-16"
           style={{ 
             opacity: contentOpacity,
             transform: `translateY(${(1 - contentOpacity) * 20}px)`
           }}
         >
-          <div className="text-center space-y-4 px-4 max-w-3xl">
+          <div className="space-y-4 px-4 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold">Data Science Portfolio</h2>
             <p className="text-xl text-muted-foreground">
               A collection of my data science and engineering projects showcasing ML, analytics, and data pipelines
