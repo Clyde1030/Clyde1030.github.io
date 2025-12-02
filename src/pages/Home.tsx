@@ -1,90 +1,334 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Github, Linkedin, Mail, ChevronDown, Database, Brain, Code2, TrendingUp, ChefHat } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import heroImage from "@/assets/background.jpg";
+import { Card } from "@/components/ui/card";
+import { useEffect, useRef } from "react";
 import profileImage from "@/assets/profile.png";
+import aboutHeroImage from "@/assets/about-hero.jpg";
+
 const Home = () => {
   const scrollProgress = useScrollProgress();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const aboutSectionRef = useRef<HTMLElement>(null);
 
-  // Calculate opacities based on scroll progress
-  const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
-  const imageScale = 1 + scrollProgress * 0.1;
-  const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
-  const contentTranslateY = Math.max(0, 30 - scrollProgress * 60);
-  return <div className="relative">
-      {/* Hero Image Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden" style={{
-      opacity: imageOpacity,
-      transform: `scale(${imageScale})`,
-      transition: 'transform 0.1s ease-out'
-    }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+  const skills = [
+    {
+      icon: Brain,
+      title: "Machine Learning",
+      description: "Building predictive models and implementing ML algorithms",
+    },
+    {
+      icon: Database,
+      title: "Data Engineering",
+      description: "Designing and optimizing data pipelines and architectures",
+    },
+    {
+      icon: Code2,
+      title: "Programming",
+      description: "Python, R, SQL, and modern data science tools",
+    },
+    {
+      icon: TrendingUp,
+      title: "Analytics",
+      description: "Statistical analysis and data visualization",
+    },
+  ];
+
+  // Calculate opacities based on scroll progress for hero section
+  const heroOpacity = Math.max(0, 1 - scrollProgress * 2);
+  const heroScale = 1 + scrollProgress * 0.1;
+
+  // Handle scroll-based navigation
+  useEffect(() => {
+    const handleScroll = () => {
+      if (aboutSectionRef.current) {
+        const aboutTop = aboutSectionRef.current.offsetTop;
+        const scrollY = window.scrollY + window.innerHeight / 2;
         
+        if (scrollY >= aboutTop && location.pathname !== "/about") {
+          navigate("/about", { replace: true });
+        } else if (scrollY < aboutTop && location.pathname === "/about") {
+          navigate("/", { replace: true });
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [navigate, location.pathname]);
+
+  // Scroll to about section if navigating directly to /about
+  useEffect(() => {
+    if (location.pathname === "/about" && aboutSectionRef.current) {
+      aboutSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
+  return (
+    <div className="relative">
+      {/* Hero Section - Your Next Data Scientist */}
+      <section
+        className="h-screen flex items-center justify-center relative overflow-hidden"
+        style={{
+          opacity: heroOpacity,
+          transform: `scale(${heroScale})`,
+          transition: "transform 0.1s ease-out",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+
         <div className="relative z-10 flex flex-col items-center gap-8 w-full">
           <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
-            <img alt="Data Science Workspace" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" className="w-full h-auto border-0 opacity-85 object-cover" />
+            <img
+              alt="Data Science Workspace"
+              src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png"
+              className="w-full h-auto border-0 opacity-85 object-cover"
+            />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
-                <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Your Next Data Scientist</h2>
+                <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Your Next Data Scientist
+                </h1>
                 <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                   Transforming data into actionable insights
                 </p>
               </div>
             </div>
           </div>
-          
-          {scrollProgress < 0.2 && <div className="animate-bounce">
+
+          {scrollProgress < 0.2 && (
+            <div className="animate-bounce">
               <ChevronDown className="w-8 h-8 text-muted-foreground" />
-            </div>}
+            </div>
+          )}
         </div>
       </section>
 
-      {/* Content Section */}
-      <section style={{
-      opacity: contentOpacity,
-      transform: `translateY(${contentTranslateY}px)`,
-      transition: 'transform 0.1s ease-out'
-    }} className="min-h-screen flex items-center justify-center px-4 -mt-screen bg-blue-200">
-        <div className="max-w-4xl w-full text-center space-y-8">
-          <div className="flex justify-center mb-6">
-            <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
-              <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
-              <AvatarFallback>DS</AvatarFallback>
-            </Avatar>
+      {/* About Me Hero Section */}
+      <section ref={aboutSectionRef} className="min-h-screen relative">
+        <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
+          <img
+            alt="About Me"
+            src={aboutHeroImage}
+            className="w-full h-auto border-0 opacity-85 object-cover"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center px-8">
+              <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                About Me
+              </h2>
+              <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                Passionate about leveraging data to solve complex problems
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Profile Photo and Description */}
+        <div className="bg-sky-300 py-16">
+          <div className="container mx-auto max-w-4xl px-4 text-center space-y-8">
+            <div className="flex justify-center mb-6">
+              <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
+                <AvatarImage
+                  src={profileImage}
+                  alt="Profile"
+                  className="object-cover object-[center_20%]"
+                />
+                <AvatarFallback>DS</AvatarFallback>
+              </Avatar>
+            </div>
+
+            <div className="max-w-2xl mx-auto space-y-4">
+              <p className="text-lg text-foreground/90">
+                Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a
+                passionate data science student specializing in machine learning, data
+                engineering, and analytical solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills & Expertise Section */}
+        <div className="container mx-auto max-w-5xl px-4 py-16">
+          <h2 className="text-3xl font-semibold mb-8 text-center">Skills & Expertise</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {skills.map((skill) => (
+              <Card
+                key={skill.title}
+                className="p-6 bg-card border-border hover:border-primary transition-colors group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <skill.icon className="w-6 h-6" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold">{skill.title}</h3>
+                    <p className="text-muted-foreground">{skill.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* My Story Timeline Section */}
+        <div className="container mx-auto max-w-5xl px-4 py-16 space-y-8">
+          <h2 className="text-3xl font-semibold text-center mb-12">My Story</h2>
+
+          {/* Timeline Item 1 - Image Left */}
+          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+              <Card className="p-6 bg-card border-border overflow-hidden">
+                <img
+                  src="/lovable-uploads/bd7abfaa-e239-4426-b764-19c6b2ca548b.jpg"
+                  alt="Early interest in data"
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+              </Card>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-primary">The Beginning</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                My journey in data science began with a fascination for uncovering patterns in
+                complex datasets. What started as curiosity quickly transformed into a passion
+                for leveraging data to solve real-world problems.
+              </p>
+            </div>
           </div>
 
-          <div className="max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
+          {/* Timeline connector line */}
+          <div className="hidden md:block w-0.5 h-16 bg-primary/30 mx-auto" />
+
+          {/* Timeline Item 2 - Image Right */}
+          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4 md:order-1">
+              <h3 className="text-2xl font-semibold text-primary">Education & Growth</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                Currently pursuing studies in Data Science, focusing on advanced statistical
+                methods, machine learning algorithms, and modern data engineering practices. My
+                coursework includes deep learning, natural language processing, and big data
+                technologies.
+              </p>
+            </div>
+            <div className="relative md:order-2">
+              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+              <Card className="p-6 bg-card border-border overflow-hidden">
+                <img
+                  src="/lovable-uploads/15d0b658-378b-41a7-bebc-1352c327072d.png"
+                  alt="Learning and development"
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+              </Card>
+            </div>
           </div>
 
+          {/* Timeline connector line */}
+          <div className="hidden md:block w-0.5 h-16 bg-primary/30 mx-auto" />
+
+          {/* Timeline Item 3 - Image Left */}
+          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+              <Card className="p-6 bg-card border-border overflow-hidden">
+                <img
+                  src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png"
+                  alt="Building projects"
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+              </Card>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-primary">Hands-On Experience</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                Through various projects in machine learning pipelines, data visualization
+                dashboards, and NLP applications, I've developed expertise in transforming
+                complex data into actionable insights that drive decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Beyond Data Section */}
+        <div className="container mx-auto max-w-5xl px-4 py-16">
+          <h2 className="text-3xl font-semibold text-center mb-8">Beyond Data</h2>
+          <Card className="p-8 bg-card border-border">
+            <div className="flex items-start gap-6">
+              <div className="p-4 rounded-lg bg-primary/10 text-primary shrink-0">
+                <ChefHat className="w-8 h-8" />
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold">Cooking Enthusiast</h3>
+                <p className="text-foreground/90 leading-relaxed">
+                  When I'm not analyzing data or training models, you'll find me in the kitchen
+                  experimenting with new recipes and flavors. I approach cooking much like data
+                  science—with curiosity, precision, and a willingness to iterate until I get
+                  the perfect result.
+                </p>
+                <p className="text-foreground/90 leading-relaxed">
+                  I particularly enjoy exploring international cuisines and the science behind
+                  cooking techniques. From understanding the Maillard reaction to perfecting
+                  fermentation processes, cooking provides a delicious intersection of art and
+                  science.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* CTA and Social Links Section */}
+        <div className="container mx-auto max-w-4xl px-4 py-16 text-center space-y-8">
           <div className="flex gap-4 justify-center flex-wrap">
             <Link to="/projects">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
+              <Button
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow"
+              >
                 View Projects
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10"
+              >
                 Get in Touch
               </Button>
             </Link>
           </div>
 
           <div className="flex gap-6 justify-center pt-8">
-            <a href="https://github.com/Clyde1030" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="https://github.com/Clyde1030"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Github className="w-6 h-6" />
             </a>
-            <a href="https://www.linkedin.com/in/yushengclydelee/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="https://www.linkedin.com/in/yushengclydelee/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="mailto:yushenglee@berkeley.edu" className="text-muted-foreground hover:text-primary transition-colors">
+            <a
+              href="mailto:yushenglee@berkeley.edu"
+              className="text-muted-foreground hover:text-primary transition-colors"
+            >
               <Mail className="w-6 h-6" />
             </a>
           </div>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
+
 export default Home;
