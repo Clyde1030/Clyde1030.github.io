@@ -22,7 +22,7 @@ const Home = () => {
         
         <div className="relative z-10 flex flex-col items-center gap-8">
           <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
-            <img alt="Data Science Workspace" className="w-full h-auto object-cover" src="/lovable-uploads/15d0b658-378b-41a7-bebc-1352c327072d.png" />
+            <img alt="Data Science Workspace" src="/lovable-uploads/15d0b658-378b-41a7-bebc-1352c327072d.png" className="w-full h-auto border-0 opacity-85 object-fill" />
           </div>
           
           {scrollProgress < 0.2 && <div className="animate-bounce">
