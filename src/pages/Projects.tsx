@@ -4,6 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import projectsHero from "@/assets/projects-hero.png";
 
 const Projects = () => {
   const scrollProgress = useScrollProgress();
@@ -25,8 +26,12 @@ const Projects = () => {
           }}
         >
           <div className="text-center space-y-6 px-4">
-            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border-2 border-primary/20">
-              <Github className="w-24 h-24 text-primary" />
+            <div className="w-64 h-64 mx-auto">
+              <img 
+                src={projectsHero} 
+                alt="Projects illustration showing data science concepts" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold">My Projects</h1>
           </div>
