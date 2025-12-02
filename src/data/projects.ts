@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "ml-pipeline",
-    title: "Machine Learning Pipeline",
+    title: "Analyzing Stock Transactions with Graph Algorithm",
     description: "Built an end-to-end ML pipeline for predictive analytics with automated model training and deployment.",
     tags: ["Python", "Scikit-learn", "Docker"],
     github: "https://github.com/yourusername/project1",
