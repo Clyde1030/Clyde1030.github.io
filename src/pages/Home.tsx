@@ -23,16 +23,6 @@ const Home = () => {
         <div className="relative z-10 flex flex-col items-center gap-8">
           <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
             <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-fill" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center px-8">
-                <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Data Scientist
-                </h2>
-                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Transforming data into actionable insights
-                </p>
-              </div>
-            </div>
           </div>
           
           {scrollProgress < 0.2 && <div className="animate-bounce">
@@ -49,8 +39,12 @@ const Home = () => {
     }}>
         <div className="max-w-4xl w-full text-center space-y-8">
           <div className="space-y-4">
-            
-            
+            <h2 className="text-5xl md:text-7xl font-bold">
+              Data Scientist
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              Transforming data into actionable insights
+            </p>
           </div>
 
           <div className="max-w-2xl mx-auto space-y-4">
