@@ -7,8 +7,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "yushenglee@berkeley.edu",
-      href: "mailto:yushenglee@berkeley.edu",
+      value: "your.email@example.com",
+      href: "mailto:your.email@example.com",
     },
     {
       icon: Linkedin,
@@ -81,7 +81,7 @@ const Contact = () => {
             </div>
 
             <div className="text-center pt-4">
-              <a href="mailto:yushenglee@berkeley.edu">
+              <a href="mailto:your.email@example.com">
                 <Button 
                   size="lg"
                   className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow"
