@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, Github, MapPin, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
-import contactImage from "@/assets/contactme.jpg";
+import contactImage from "@/assets/contactme.png";
 
 const Contact = () => {
   const scrollProgress = useScrollProgress();
@@ -54,11 +54,11 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8 w-full px-4">
-          <div className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30 bg-background/50">
+          <div className="relative w-full max-w-6xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
             <img 
               alt="Contact me" 
               src={contactImage} 
-              className="w-full h-[70vh] border-0 opacity-85 object-contain" 
+              className="w-full h-auto border-0 opacity-90 object-cover" 
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-center px-8">
