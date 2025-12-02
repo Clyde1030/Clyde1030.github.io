@@ -49,12 +49,8 @@ const Home = () => {
     }}>
         <div className="max-w-4xl w-full text-center space-y-8">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Data Scientist
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground">
-              Transforming data into actionable insights
-            </p>
+            
+            
           </div>
 
           <div className="max-w-2xl mx-auto space-y-4">
