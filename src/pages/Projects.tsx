@@ -24,8 +24,8 @@ const Projects = () => {
     }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
-        <div className="relative z-10 flex flex-col items-center gap-8 w-full px-4">
-          <div className="relative w-full max-w-7xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+        <div className="relative z-10 flex flex-col items-center gap-8 w-full">
+          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
             <img alt="Programming and data visualization" src={programmingImage} className="w-full h-auto border-0 opacity-85 object-cover" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
