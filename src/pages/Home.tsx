@@ -108,7 +108,7 @@ const Home = () => {
       </section>
 
       {/* About Me Hero Section */}
-      <section ref={aboutSectionRef} className="min-h-screen relative">
+      <section ref={aboutSectionRef} id="about-section" className="min-h-screen relative">
         <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
           <img
             alt="About Me"
