@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import heroImage from "@/assets/background.jpg";
 
 const Home = () => {
   const scrollProgress = useScrollProgress();
@@ -26,9 +27,12 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8">
-          {/* Placeholder for profile image - replace with your photo */}
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-primary/30 via-primary/20 to-primary/10 border-2 border-primary/30 shadow-[0_0_60px_hsl(var(--primary)/0.3)] flex items-center justify-center">
-            <div className="text-6xl md:text-8xl font-bold text-primary/40">DS</div>
+          <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+            <img 
+              src={heroImage} 
+              alt="Data Science Workspace" 
+              className="w-full h-auto object-cover"
+            />
           </div>
           
           {scrollProgress < 0.2 && (
