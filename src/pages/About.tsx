@@ -71,26 +71,7 @@ const About = () => {
 
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
-        <div className="space-y-6">
-          <Card className="p-8 bg-card border-border">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">Background</h2>
-            <p className="text-foreground/90 leading-relaxed">
-              I'm currently pursuing my studies in data science, where I'm developing expertise in 
-              machine learning, statistical analysis, and data engineering. My journey in data science 
-              has been driven by curiosity and a desire to extract meaningful insights from complex datasets.
-            </p>
-          </Card>
-
-          <Card className="p-8 bg-card border-border">
-            <h2 className="text-2xl font-semibold mb-4 text-primary">Education</h2>
-            <p className="text-foreground/90 leading-relaxed">
-              Currently studying Data Science, focusing on advanced statistical methods, machine learning 
-              algorithms, and modern data engineering practices. My coursework includes deep learning, 
-              natural language processing, and big data technologies.
-            </p>
-          </Card>
-        </div>
-
+        {/* Skills & Expertise Section - Moved to Top */}
         <div>
           <h2 className="text-3xl font-semibold mb-8 text-center">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -113,7 +94,82 @@ const About = () => {
           </div>
         </div>
 
-        {/* Personal Life Section */}
+        {/* My Story Timeline Section */}
+        <div className="space-y-8">
+          <h2 className="text-3xl font-semibold text-center mb-12">My Story</h2>
+          
+          {/* Timeline Item 1 - Image Left */}
+          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+              <Card className="p-6 bg-card border-border overflow-hidden">
+                <img 
+                  src="/lovable-uploads/bd7abfaa-e239-4426-b764-19c6b2ca548b.jpg" 
+                  alt="Early interest in data" 
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+              </Card>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-primary">The Beginning</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                My journey in data science began with a fascination for uncovering patterns in complex datasets. 
+                What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems.
+              </p>
+            </div>
+          </div>
+
+          {/* Timeline connector line */}
+          <div className="hidden md:block w-0.5 h-16 bg-primary/30 mx-auto" />
+
+          {/* Timeline Item 2 - Image Right */}
+          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            <div className="space-y-4 md:order-1">
+              <h3 className="text-2xl font-semibold text-primary">Education & Growth</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning 
+                algorithms, and modern data engineering practices. My coursework includes deep learning, 
+                natural language processing, and big data technologies.
+              </p>
+            </div>
+            <div className="relative md:order-2">
+              <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+              <Card className="p-6 bg-card border-border overflow-hidden">
+                <img 
+                  src="/lovable-uploads/15d0b658-378b-41a7-bebc-1352c327072d.png" 
+                  alt="Learning and development" 
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+              </Card>
+            </div>
+          </div>
+
+          {/* Timeline connector line */}
+          <div className="hidden md:block w-0.5 h-16 bg-primary/30 mx-auto" />
+
+          {/* Timeline Item 3 - Image Left */}
+          <div className="relative grid md:grid-cols-2 gap-8 items-center">
+            <div className="relative">
+              <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+              <Card className="p-6 bg-card border-border overflow-hidden">
+                <img 
+                  src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" 
+                  alt="Building projects" 
+                  className="w-full h-64 object-cover rounded-lg"
+                />
+              </Card>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold text-primary">Hands-On Experience</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, 
+                I've developed expertise in transforming complex data into actionable insights that drive decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Beyond Data Section - At Bottom */}
         <div className="space-y-6">
           <h2 className="text-3xl font-semibold text-center mb-8">Beyond Data</h2>
           <Card className="p-8 bg-card border-border">
