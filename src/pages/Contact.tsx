@@ -32,7 +32,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Your City, Country",
+      value: "Irvine, CA",
       href: null,
     },
   ];
