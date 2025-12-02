@@ -117,7 +117,7 @@ const Contact = () => {
               ))}
               
               {/* Resume Download Box */}
-              <div className="p-6 rounded-lg bg-secondary/50 border border-border hover:border-primary transition-colors group md:col-span-2">
+              <div className="p-6 rounded-lg bg-secondary/50 border border-border hover:border-primary transition-colors group">
                 <div className="flex items-center justify-between">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
