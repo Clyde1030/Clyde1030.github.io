@@ -1,34 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
+import { projects } from "@/data/projects";
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Machine Learning Pipeline",
-      description: "Built an end-to-end ML pipeline for predictive analytics with automated model training and deployment.",
-      tags: ["Python", "Scikit-learn", "Docker"],
-      github: "https://github.com/yourusername/project1",
-    },
-    {
-      title: "Data Visualization Dashboard",
-      description: "Interactive dashboard for real-time data visualization and analytics using modern web technologies.",
-      tags: ["React", "D3.js", "PostgreSQL"],
-      github: "https://github.com/yourusername/project2",
-    },
-    {
-      title: "NLP Sentiment Analysis",
-      description: "Natural language processing project analyzing sentiment in social media data using transformer models.",
-      tags: ["Python", "PyTorch", "BERT"],
-      github: "https://github.com/yourusername/project3",
-    },
-    {
-      title: "ETL Data Pipeline",
-      description: "Scalable ETL pipeline processing large datasets with Apache Spark and cloud infrastructure.",
-      tags: ["Spark", "AWS", "Python"],
-      github: "https://github.com/yourusername/project4",
-    },
-  ];
 
   return (
     <div className="min-h-screen py-24 px-4">
@@ -47,9 +23,11 @@ const Projects = () => {
               className="p-6 bg-card border-border hover:border-primary transition-all group"
             >
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
+                <Link to={`/projects/${project.id}`}>
+                  <h3 className="text-2xl font-semibold group-hover:text-primary transition-colors cursor-pointer">
+                    {project.title}
+                  </h3>
+                </Link>
                 <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
