@@ -117,19 +117,26 @@ const Contact = () => {
               ))}
               
               {/* Resume Download Box */}
-              <div className="p-6 rounded-lg bg-secondary/50 border border-border hover:border-primary transition-colors group">
-                <div className="flex flex-col gap-4">
+              <div className="p-6 rounded-lg bg-secondary/50 border border-border hover:border-primary transition-colors group md:col-span-2">
+                <div className="flex items-center justify-between">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <FileDown className="w-5 h-5" />
                     </div>
                     <div className="space-y-1">
                       <p className="text-sm text-muted-foreground">Resume</p>
-                      <a href="/resume.pdf" download className="font-mono text-sm hover:text-primary transition-colors">
-                        Download CV
-                      </a>
+                      <p className="font-mono text-sm">Download my CV/Resume</p>
                     </div>
                   </div>
+                  <a href="/resume.pdf" download>
+                    <Button 
+                      variant="outline"
+                      className="border-primary text-primary hover:bg-primary/10"
+                    >
+                      <FileDown className="w-4 h-4 mr-2" />
+                      Download
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
