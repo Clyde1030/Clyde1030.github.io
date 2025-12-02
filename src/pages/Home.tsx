@@ -51,7 +51,7 @@ const Home = () => {
     }}>
         <div className="max-w-4xl w-full text-center space-y-8">
           <div className="flex justify-center mb-6">
-            <Avatar className="h-40 w-40 border-4 border-primary/20 shadow-glow">
+            <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
               <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
               <AvatarFallback>DS</AvatarFallback>
             </Avatar>
