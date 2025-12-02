@@ -42,7 +42,7 @@ const Home = () => {
       </section>
 
       {/* Content Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 -mt-screen" style={{
+      <section className="min-h-screen flex items-center justify-center px-4 -mt-screen bg-sky-300" style={{
       opacity: contentOpacity,
       transform: `translateY(${contentTranslateY}px)`,
       transition: 'transform 0.1s ease-out'
