@@ -2,7 +2,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import heroImage from "@/assets/background.jpg";
+import profileImage from "@/assets/profile.png";
 const Home = () => {
   const scrollProgress = useScrollProgress();
 
@@ -48,9 +50,15 @@ const Home = () => {
       transition: 'transform 0.1s ease-out'
     }}>
         <div className="max-w-4xl w-full text-center space-y-8">
-          <div className="space-y-4">
-            
-            
+          <div className="flex justify-center mb-6">
+            <Avatar className="h-40 w-40 border-4 border-primary/20 shadow-glow">
+              <AvatarImage 
+                src={profileImage} 
+                alt="Profile" 
+                className="object-cover object-[center_20%]"
+              />
+              <AvatarFallback>DS</AvatarFallback>
+            </Avatar>
           </div>
 
           <div className="max-w-2xl mx-auto space-y-4">
