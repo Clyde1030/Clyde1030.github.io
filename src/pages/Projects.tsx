@@ -19,21 +19,18 @@ const Projects = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Image section that fades out */}
         <div 
-          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
+          className="absolute inset-0 transition-all duration-300"
           style={{ 
-            opacity: imageOpacity,
-            transform: `scale(${0.95 + imageOpacity * 0.05})`
+            opacity: imageOpacity
           }}
         >
-          <div className="text-center space-y-6 px-4">
-            <div className="w-64 h-64 mx-auto">
-              <img 
-                src={projectsHero} 
-                alt="Projects illustration showing data science concepts" 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold">My Projects</h1>
+          <img 
+            src={projectsHero} 
+            alt="Projects illustration showing data science concepts" 
+            className="w-full h-full object-cover opacity-50"
+          />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground drop-shadow-lg">My Projects</h1>
           </div>
         </div>
 
