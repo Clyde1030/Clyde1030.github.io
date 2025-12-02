@@ -19,7 +19,7 @@ const Projects = () => {
       <section className="relative overflow-hidden">
         {/* Image section that fades out */}
         <div 
-          className="relative h-[60vh] transition-all duration-300"
+          className="relative h-[70vh] transition-all duration-300"
           style={{ 
             opacity: imageOpacity
           }}
@@ -27,7 +27,7 @@ const Projects = () => {
           <img 
             src={projectsHero} 
             alt="Projects illustration showing data science concepts" 
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-contain opacity-50"
           />
         </div>
 
