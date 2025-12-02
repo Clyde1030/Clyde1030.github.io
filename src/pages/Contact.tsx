@@ -14,8 +14,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "yushenglee@berkeley.edu",
+      href: "mailto:yushenglee@berkeley.edu",
     },
     {
       icon: Linkedin,
@@ -142,8 +142,8 @@ const Contact = () => {
             </div>
 
             <div className="text-center pt-4">
-              <a href="mailto:your.email@example.com">
-                <Button 
+              <a href="mailto:yushenglee@berkeley.edu">
+                <Button
                   size="lg"
                   className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow"
                 >
