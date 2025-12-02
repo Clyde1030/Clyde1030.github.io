@@ -27,9 +27,7 @@ const Home = () => {
             <img alt="Data Science Workspace" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" className="w-full h-auto border-0 opacity-85 object-cover" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
-                <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Data Scientist
-                </h2>
+                <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Your Next Data Scientist</h2>
                 <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                   Transforming data into actionable insights
                 </p>
