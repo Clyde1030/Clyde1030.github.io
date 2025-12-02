@@ -2,13 +2,16 @@ import { Card } from "@/components/ui/card";
 import { Mail, Linkedin, Github, MapPin, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import contactImage from "@/assets/contactme.jpg";
 
 const Contact = () => {
   const scrollProgress = useScrollProgress();
   
   // Calculate opacities based on scroll progress
   const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
+  const imageScale = 1 + scrollProgress * 0.1;
   const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
+  const contentTranslateY = Math.max(0, 30 - scrollProgress * 60);
   
   const contactMethods = [
     {
@@ -38,44 +41,49 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero section with scroll effect */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Image section that fades out */}
-        <div 
-          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
-          style={{ 
-            opacity: imageOpacity,
-            transform: `scale(${0.95 + imageOpacity * 0.05})`
-          }}
-        >
-          <div className="text-center space-y-6 px-4">
-            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border-2 border-primary/20">
-              <Mail className="w-24 h-24 text-primary" />
+    <div className="relative">
+      {/* Hero Image Section */}
+      <section 
+        className="h-screen flex items-center justify-center relative overflow-hidden"
+        style={{
+          opacity: imageOpacity,
+          transform: `scale(${imageScale})`,
+          transition: 'transform 0.1s ease-out'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        
+        <div className="relative z-10 flex flex-col items-center gap-8 w-full px-4">
+          <div className="relative w-full max-w-7xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+            <img 
+              alt="Contact me" 
+              src={contactImage} 
+              className="w-full h-auto border-0 opacity-85 object-cover" 
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center px-8">
+                <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Contact Me
+                </h2>
+                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Let's connect and collaborate
+                </p>
+              </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold">Contact</h1>
-          </div>
-        </div>
-
-        {/* Content section that fades in */}
-        <div 
-          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
-          style={{ 
-            opacity: contentOpacity,
-            transform: `translateY(${(1 - contentOpacity) * 20}px)`
-          }}
-        >
-          <div className="text-center space-y-4 px-4 max-w-3xl">
-            <h2 className="text-4xl md:text-5xl font-bold">Get in Touch</h2>
-            <p className="text-xl text-muted-foreground">
-              I'm always interested in new opportunities, collaborations, and interesting conversations
-            </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <div className="container mx-auto max-w-4xl space-y-12 px-4 py-16">
+      {/* Content Section */}
+      <section 
+        className="min-h-screen flex items-start justify-center px-4 -mt-screen"
+        style={{
+          opacity: contentOpacity,
+          transform: `translateY(${contentTranslateY}px)`,
+          transition: 'transform 0.1s ease-out'
+        }}
+      >
+        <div className="w-full max-w-4xl space-y-12 pt-16">
 
         <Card className="p-8 md:p-12 bg-card border-border">
           <div className="space-y-8">
@@ -154,7 +162,8 @@ const Contact = () => {
             </div>
           </div>
         </Card>
-      </div>
+        </div>
+      </section>
     </div>
   );
 };
