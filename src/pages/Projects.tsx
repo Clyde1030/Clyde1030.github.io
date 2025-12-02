@@ -3,18 +3,54 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
+import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 const Projects = () => {
+  const scrollProgress = useScrollProgress();
+  
+  // Calculate opacities based on scroll progress
+  const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
+  const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
 
   return (
-    <div className="min-h-screen py-24 px-4">
-      <div className="container mx-auto max-w-6xl space-y-12 animate-slide-up">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">Projects</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A collection of my data science and engineering projects
-          </p>
+    <div className="min-h-screen">
+      {/* Hero section with scroll effect */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Image section that fades out */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
+          style={{ 
+            opacity: imageOpacity,
+            transform: `scale(${0.95 + imageOpacity * 0.05})`
+          }}
+        >
+          <div className="text-center space-y-6 px-4">
+            <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border-2 border-primary/20">
+              <Github className="w-24 h-24 text-primary" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold">My Projects</h1>
+          </div>
         </div>
+
+        {/* Content section that fades in */}
+        <div 
+          className="absolute inset-0 flex items-center justify-center transition-all duration-300"
+          style={{ 
+            opacity: contentOpacity,
+            transform: `translateY(${(1 - contentOpacity) * 20}px)`
+          }}
+        >
+          <div className="text-center space-y-4 px-4 max-w-3xl">
+            <h2 className="text-4xl md:text-5xl font-bold">Data Science Portfolio</h2>
+            <p className="text-xl text-muted-foreground">
+              A collection of my data science and engineering projects showcasing ML, analytics, and data pipelines
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Grid */}
+      <div className="container mx-auto max-w-6xl space-y-12 px-4 py-16">
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project) => (
