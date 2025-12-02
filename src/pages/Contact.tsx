@@ -54,13 +54,13 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8 w-full px-4">
-          <div className="relative w-full max-w-7xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
+          <div className="relative w-full max-w-5xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30 bg-background/50">
             <img 
               alt="Contact me" 
               src={contactImage} 
-              className="w-full h-auto border-0 opacity-85 object-cover" 
+              className="w-full h-[70vh] border-0 opacity-85 object-contain" 
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="text-center px-8">
                 <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                   Contact Me
