@@ -58,10 +58,7 @@ const Home = () => {
           </div>
 
           <div className="max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-foreground/90">
-              Welcome to my portfolio. I'm a passionate data science student specializing in 
-              machine learning, data engineering, and analytical solutions.
-            </p>
+            <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
           </div>
 
           <div className="flex gap-4 justify-center flex-wrap">
