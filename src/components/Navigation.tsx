@@ -1,36 +1,29 @@
 import { NavLink } from "@/components/NavLink";
-
 const Navigation = () => {
-  const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/contact" },
-  ];
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+  const navItems = [{
+    name: "Home",
+    path: "/"
+  }, {
+    name: "About",
+    path: "/about"
+  }, {
+    name: "Projects",
+    path: "/projects"
+  }, {
+    name: "Contact",
+    path: "/contact"
+  }];
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-          Portfolio
-        </div>
+        <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">Clyde's Data Science Journey </div>
         <ul className="flex gap-8">
-          {navItems.map((item) => (
-            <li key={item.path}>
-              <NavLink
-                to={item.path}
-                end={item.path === "/"}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-                activeClassName="text-primary font-semibold"
-              >
+          {navItems.map(item => <li key={item.path}>
+              <NavLink to={item.path} end={item.path === "/"} className="text-muted-foreground hover:text-foreground transition-colors" activeClassName="text-primary font-semibold">
                 {item.name}
               </NavLink>
-            </li>
-          ))}
+            </li>)}
         </ul>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navigation;
