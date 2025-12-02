@@ -44,14 +44,14 @@ const Home = () => {
       </section>
 
       {/* Content Section */}
-      <section className="min-h-screen flex items-center justify-center px-4 -mt-[70vh]" style={{
+      <section className="min-h-screen flex items-center justify-center px-4 -mt-screen" style={{
       opacity: contentOpacity,
       transform: `translateY(${contentTranslateY}px)`,
       transition: 'transform 0.1s ease-out'
     }}>
         <div className="max-w-4xl w-full text-center space-y-8">
           <div className="flex justify-center mb-6">
-            <Avatar className="h-56 w-56 border-4 border-primary/20 shadow-glow">
+            <Avatar className="h-40 w-40 border-4 border-primary/20 shadow-glow">
               <AvatarImage 
                 src={profileImage} 
                 alt="Profile" 
