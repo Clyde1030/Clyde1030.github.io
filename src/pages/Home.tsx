@@ -115,33 +115,23 @@ const Home = () => {
             src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png"
             className="w-full h-auto border-0 opacity-85 object-cover"
           />
-          <div className="absolute top-4 left-4 md:top-8 md:left-8">
-            <Avatar className="h-24 w-24 md:h-32 md:w-32 border-4 border-white/50 shadow-lg">
-              <AvatarImage
-                src={profileImage}
-                alt="Profile"
-                className="object-cover object-[center_20%]"
-              />
-              <AvatarFallback>DS</AvatarFallback>
-            </Avatar>
-          </div>
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center px-8">
+            <div className="text-center px-8 flex flex-col items-center">
+              <Avatar className="h-48 w-48 md:h-64 md:w-64 border-4 border-white/50 shadow-lg mb-4">
+                <AvatarImage
+                  src={profileImage}
+                  alt="Profile"
+                  className="object-cover object-[center_20%]"
+                />
+                <AvatarFallback>DS</AvatarFallback>
+              </Avatar>
               <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                 About Me
               </h2>
               <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                 Passionate about leveraging data to solve complex problems
               </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Description */}
-        <div className="bg-sky-300 py-16">
-          <div className="container mx-auto max-w-4xl px-4 text-center space-y-8">
-            <div className="max-w-2xl mx-auto space-y-4">
-              <p className="text-lg text-foreground/90">
+              <p className="text-lg text-white/90 mt-4 max-w-2xl drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                 Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a
                 passionate data science student specializing in machine learning, data
                 engineering, and analytical solutions.
