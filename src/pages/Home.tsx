@@ -24,9 +24,14 @@ const Home = () => {
           <div className="relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)] border-2 border-primary/30">
             <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-fill" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <h2 className="text-3xl md:text-5xl font-bold text-white text-center px-8 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                Data Scientist | Driving Insight Through Data
-              </h2>
+              <div className="text-center px-8">
+                <h2 className="text-4xl md:text-6xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Data Scientist
+                </h2>
+                <p className="text-lg md:text-xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Transforming data into actionable insights
+                </p>
+              </div>
             </div>
           </div>
           
