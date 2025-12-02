@@ -29,7 +29,7 @@ const Projects = () => {
             alt="Projects illustration showing data science concepts" 
             className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex items-start justify-center pt-[45vh]">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground drop-shadow-lg">My Projects</h1>
           </div>
         </div>
