@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import aboutHeroImage from "@/assets/about-hero.jpg";
+import immersionImage from "@/assets/immersion.jpg";
 
 const About = () => {
   const scrollProgress = useScrollProgress();
@@ -196,6 +197,11 @@ const About = () => {
               </div>
             </div>
           </Card>
+          <img 
+            src={immersionImage} 
+            alt="Immersion event" 
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
       </section>
