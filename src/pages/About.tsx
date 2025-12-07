@@ -3,47 +3,38 @@ import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown } from "lucide
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import aboutHeroImage from "@/assets/about-hero.jpg";
 import immersionImage from "@/assets/immersion.jpg";
-
 const About = () => {
   const scrollProgress = useScrollProgress();
-  
+
   // Calculate opacities based on scroll progress
   const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
   const imageScale = 1 + scrollProgress * 0.1;
   const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
   const contentTranslateY = Math.max(0, 30 - scrollProgress * 60);
-  
-  const skills = [
-    {
-      icon: Brain,
-      title: "Machine Learning",
-      description: "Building predictive models and implementing ML algorithms",
-    },
-    {
-      icon: Database,
-      title: "Data Engineering",
-      description: "Designing and optimizing data pipelines and architectures",
-    },
-    {
-      icon: Code2,
-      title: "Programming",
-      description: "Python, R, SQL, and modern data science tools",
-    },
-    {
-      icon: TrendingUp,
-      title: "Analytics",
-      description: "Statistical analysis and data visualization",
-    },
-  ];
-
-  return (
-    <div className="relative">
+  const skills = [{
+    icon: Brain,
+    title: "Machine Learning",
+    description: "Building predictive models and implementing ML algorithms"
+  }, {
+    icon: Database,
+    title: "Data Engineering",
+    description: "Designing and optimizing data pipelines and architectures"
+  }, {
+    icon: Code2,
+    title: "Programming",
+    description: "Python, R, SQL, and modern data science tools"
+  }, {
+    icon: TrendingUp,
+    title: "Analytics",
+    description: "Statistical analysis and data visualization"
+  }];
+  return <div className="relative">
       {/* Hero Image Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden" style={{
-        opacity: imageOpacity,
-        transform: `scale(${imageScale})`,
-        transition: 'transform 0.1s ease-out'
-      }}>
+      opacity: imageOpacity,
+      transform: `scale(${imageScale})`,
+      transition: 'transform 0.1s ease-out'
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8 w-full">
@@ -67,10 +58,10 @@ const About = () => {
 
       {/* Content Section */}
       <section className="min-h-screen flex items-start justify-center px-4 -mt-screen pt-16" style={{
-        opacity: contentOpacity,
-        transform: `translateY(${contentTranslateY}px)`,
-        transition: 'transform 0.1s ease-out'
-      }}>
+      opacity: contentOpacity,
+      transform: `translateY(${contentTranslateY}px)`,
+      transition: 'transform 0.1s ease-out'
+    }}>
 
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
@@ -78,11 +69,7 @@ const About = () => {
         <div>
           <h2 className="text-3xl font-semibold mb-8 text-center">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((skill) => (
-              <Card 
-                key={skill.title} 
-                className="p-6 bg-card border-border hover:border-primary transition-colors group"
-              >
+            {skills.map(skill => <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
                 <div className="flex items-start gap-4">
                   <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     <skill.icon className="w-6 h-6" />
@@ -92,8 +79,7 @@ const About = () => {
                     <p className="text-muted-foreground">{skill.description}</p>
                   </div>
                 </div>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -106,18 +92,13 @@ const About = () => {
             <div className="relative">
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
               <Card className="p-6 bg-card border-border overflow-hidden">
-                <img 
-                  src="/lovable-uploads/bd7abfaa-e239-4426-b764-19c6b2ca548b.jpg" 
-                  alt="Early interest in data" 
-                  className="w-full h-64 object-cover rounded-lg"
-                />
+                <img src="/lovable-uploads/bd7abfaa-e239-4426-b764-19c6b2ca548b.jpg" alt="Early interest in data" className="w-full h-64 object-cover rounded-lg" />
               </Card>
             </div>
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-primary">The Beginning</h3>
               <p className="text-foreground/90 leading-relaxed">
-                My journey in data science began with a fascination for uncovering patterns in complex datasets. 
-                What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems.
+                I am from Taiwan. I began my professional path as an actuarial student, passing three actuarial exams while working at an insurance company in Portland, Oregon. During this time, I became increasingly interested in the tools and technologies that powered our financial reporting processes. While my initial focus was on actuarial modeling, I found myself fascinated by the behind-the-scenes systems that made everything run — from Python scripts and SQL queries to VBA macros automating Excel reports. 
               </p>
             </div>
           </div>
@@ -129,20 +110,12 @@ const About = () => {
           <div className="relative grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-4 md:order-1">
               <h3 className="text-2xl font-semibold text-primary">Education & Growth</h3>
-              <p className="text-foreground/90 leading-relaxed">
-                Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning 
-                algorithms, and modern data engineering practices. My coursework includes deep learning, 
-                natural language processing, and big data technologies.
-              </p>
+              <p className="text-foreground/90 leading-relaxed">My journey in data science began with a fascination for uncovering patterns in complex datasets. What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems. Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies.</p>
             </div>
             <div className="relative md:order-2">
               <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
               <Card className="p-6 bg-card border-border overflow-hidden">
-                <img 
-                  src="/lovable-uploads/15d0b658-378b-41a7-bebc-1352c327072d.png" 
-                  alt="Learning and development" 
-                  className="w-full h-64 object-cover rounded-lg"
-                />
+                <img src="/lovable-uploads/15d0b658-378b-41a7-bebc-1352c327072d.png" alt="Learning and development" className="w-full h-64 object-cover rounded-lg" />
               </Card>
             </div>
           </div>
@@ -155,11 +128,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
               <Card className="p-6 bg-card border-border overflow-hidden">
-                <img 
-                  src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" 
-                  alt="Building projects" 
-                  className="w-full h-64 object-cover rounded-lg"
-                />
+                <img src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" alt="Building projects" className="w-full h-64 object-cover rounded-lg" />
               </Card>
             </div>
             <div className="space-y-4">
@@ -197,16 +166,10 @@ const About = () => {
               </div>
             </div>
           </Card>
-          <img 
-            src={immersionImage} 
-            alt="Immersion event" 
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
+          <img src={immersionImage} alt="Immersion event" className="w-full h-auto rounded-lg shadow-lg" />
         </div>
       </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
