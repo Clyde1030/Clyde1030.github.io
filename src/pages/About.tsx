@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import immersionImage from "@/assets/immersion.jpg";
 import profileImage from "@/assets/profile.png";
 import welcomeBg from "@/assets/welcome-bg.jpg";
-
 const About = () => {
   const skills = [{
     icon: Brain,
@@ -25,22 +24,20 @@ const About = () => {
     title: "Analytics",
     description: "Statistical analysis and data visualization"
   }];
-
   return <div className="pt-16">
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-8">
         {/* Welcome Section with Profile */}
         <div className="relative rounded-2xl overflow-hidden -mx-4 -mt-8">
           {/* Background Image */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${welcomeBg})` }}
-          />
+          <div style={{
+          backgroundImage: `url(${welcomeBg})`
+        }} className="absolute inset-0 bg-cover bg-center border-0 border-primary opacity-80" />
           {/* Fade Overlay */}
           <div className="absolute inset-0 bg-background/40" />
           
           {/* Content */}
-          <div className="relative text-center space-y-8 py-16 px-8">
+          <div className="relative text-center space-y-8 py-16 px-[64px] mx-0">
             <div className="flex justify-center mb-6">
               <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
                 <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
