@@ -136,7 +136,7 @@ const About = () => {
                 {/* Food Photo Grid - 3x2 on lg, 2x3 on md, 1x6 on sm */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-6">
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <img alt="Dish 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/5b9f7bc0-5451-44a1-bd84-377b481a8015.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                     <img src="/lovable-uploads/placeholder.svg" alt="Dish 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
