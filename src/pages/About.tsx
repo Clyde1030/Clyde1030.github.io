@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { ChefHat } from "lucide-react";
 import aboutHeroImage from "@/assets/about-hero.jpg";
-import immersionImage from "@/assets/immersion.jpg";
+
 const About = () => {
   return <div className="min-h-screen">
       {/* Hero Image Section */}
@@ -120,28 +120,51 @@ const About = () => {
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold text-center mb-8">Beyond Data</h2>
             <Card className="p-8 bg-card border-border">
-              <div className="flex items-start gap-6">
-                <div className="p-4 rounded-lg bg-primary/10 text-primary shrink-0">
-                  <ChefHat className="w-8 h-8" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-6">
+                  <div className="p-4 rounded-lg bg-primary/10 text-primary shrink-0">
+                    <ChefHat className="w-8 h-8" />
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-semibold">Cooking Enthusiast</h3>
+                    <p className="text-foreground/90 leading-relaxed">
+                      When I'm not analyzing data or training models, you'll find me in the kitchen experimenting 
+                      with new recipes and flavors. I approach cooking much like data science—with curiosity, 
+                      precision, and a willingness to iterate until I get the perfect result. Whether it's mastering 
+                      a complex dish or creating my own recipes, cooking allows me to express creativity while 
+                      following structured processes, much like building a well-architected data pipeline.
+                    </p>
+                    <p className="text-foreground/90 leading-relaxed">
+                      I particularly enjoy exploring international cuisines and the science behind cooking techniques. 
+                      From understanding the Maillard reaction to perfecting fermentation processes, cooking provides 
+                      a delicious intersection of art and science that keeps me engaged outside of my professional work.
+                    </p>
+                  </div>
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-semibold">Cooking Enthusiast</h3>
-                  <p className="text-foreground/90 leading-relaxed">
-                    When I'm not analyzing data or training models, you'll find me in the kitchen experimenting 
-                    with new recipes and flavors. I approach cooking much like data science—with curiosity, 
-                    precision, and a willingness to iterate until I get the perfect result. Whether it's mastering 
-                    a complex dish or creating my own recipes, cooking allows me to express creativity while 
-                    following structured processes, much like building a well-architected data pipeline.
-                  </p>
-                  <p className="text-foreground/90 leading-relaxed">
-                    I particularly enjoy exploring international cuisines and the science behind cooking techniques. 
-                    From understanding the Maillard reaction to perfecting fermentation processes, cooking provides 
-                    a delicious intersection of art and science that keeps me engaged outside of my professional work.
-                  </p>
+                
+                {/* Food Photo Grid - 3x2 on lg, 2x3 on md, 1x6 on sm */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+                  <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 1" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 2" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 3" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 5" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
+                  <div className="aspect-square rounded-lg overflow-hidden bg-muted">
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 6" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                  </div>
                 </div>
               </div>
             </Card>
-            <img src={immersionImage} alt="Immersion event" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
