@@ -6,7 +6,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/background.jpg";
 import profileImage from "@/assets/profile.png";
-
 const skills = [{
   icon: Brain,
   title: "Machine Learning",
@@ -43,7 +42,7 @@ const Home = () => {
         
         <div className="relative z-10 flex flex-col items-center gap-8 w-full">
           <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
-            <img alt="Data Science Workspace" src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" className="w-full h-auto border-0 opacity-85 object-cover" />
+            <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-cover" src="/lovable-uploads/fd56ed54-d3cf-4adb-9750-4abcc3b7d01f.png" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
                 <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Your Next Data Scientist</h2>
@@ -82,8 +81,7 @@ const Home = () => {
           <div className="w-full bg-white rounded-xl p-8 mt-8">
             <h2 className="text-3xl font-semibold mb-8 text-center text-foreground">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {skills.map(skill => (
-                <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
+              {skills.map(skill => <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <skill.icon className="w-6 h-6" />
@@ -93,8 +91,7 @@ const Home = () => {
                       <p className="text-muted-foreground">{skill.description}</p>
                     </div>
                   </div>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
