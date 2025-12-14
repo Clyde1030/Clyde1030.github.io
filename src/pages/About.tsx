@@ -154,7 +154,7 @@ const About = () => {
                     <img alt="Dish 6" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/4eb70d69-fdc6-46ce-96e9-f9867b6ebee4.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 7" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <img alt="Dish 7" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/3ca2ae77-6003-4deb-9e99-b5ca33e4e234.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                     <img alt="Dish 8" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/41d623fc-9185-4094-8f8f-4b944fc0b901.jpg" />
