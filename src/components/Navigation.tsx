@@ -1,9 +1,6 @@
 import { NavLink } from "@/components/NavLink";
 const Navigation = () => {
   const navItems = [{
-    name: "Home",
-    path: "/"
-  }, {
     name: "About",
     path: "/about"
   }, {
