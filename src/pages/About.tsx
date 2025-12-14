@@ -148,7 +148,7 @@ const About = () => {
                     <img alt="Dish 4" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/1b6a69e2-c94d-43ea-8fd5-43802d194518.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img alt="Dish 5" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/aa3ea965-6b4e-4adf-832c-c0ed293c25ca.jpg" />
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 5" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                     <img alt="Dish 6" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/4eb70d69-fdc6-46ce-96e9-f9867b6ebee4.jpg" />
@@ -157,7 +157,7 @@ const About = () => {
                     <img src="/lovable-uploads/placeholder.svg" alt="Dish 7" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 8" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <img alt="Dish 8" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/41d623fc-9185-4094-8f8f-4b944fc0b901.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                     <img src="/lovable-uploads/placeholder.svg" alt="Dish 9" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
