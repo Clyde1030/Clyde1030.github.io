@@ -127,11 +127,9 @@ const About = () => {
                   <div className="space-y-4">
                     <h3 className="text-2xl font-semibold">Cooking Enthusiast</h3>
                     <p className="text-foreground/90 leading-relaxed">
-                      When I'm not analyzing data or training models, you'll find me in the kitchen experimenting with new recipes and flavors. 
+                      When I'm not analyzing data or training models, you'll find me in the kitchen experimenting with new recipes and flavors. I enjoy exploring international cuisines! From understanding the Maillard reaction to perfecting fermentation processes, cooking provides a delicious intersection of art and science that keeps me engaged outside of my professional work.  
                     </p>
-                    <p className="text-foreground/90 leading-relaxed">
-                      ​I enjoy exploring international cuisines! From understanding the Maillard reaction to perfecting fermentation processes, cooking provides a delicious intersection of art and science that keeps me engaged outside of my professional work.
-                    </p>
+                    
                   </div>
                 </div>
                 
