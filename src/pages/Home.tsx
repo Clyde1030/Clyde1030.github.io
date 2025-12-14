@@ -5,7 +5,7 @@ import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/background.jpg";
-import profileImage from "@/assets/profile.png";
+import profileImage from "@/assets/profile2.png";
 const skills = [{
   icon: Brain,
   title: "Machine Learning",
