@@ -32,7 +32,7 @@ const About = () => {
               <div className="relative">
                 <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
                 <Card className="p-6 bg-card border-border overflow-hidden">
-                  <img alt="Early interest in data" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/cfd36bff-b660-4e1c-a0fa-867e5bdee01d.jpg" />
+                  <img alt="Early interest in data" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/432403e8-b809-4598-9210-2eb1db8a85b8.png" />
                 </Card>
               </div>
               <div className="space-y-4">
