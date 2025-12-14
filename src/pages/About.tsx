@@ -14,9 +14,7 @@ const About = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
                 <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">About Me</h1>
-                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Passionate about leveraging data to solve complex problems
-                </p>
+                
               </div>
             </div>
           </div>
