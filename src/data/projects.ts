@@ -44,38 +44,21 @@ export const projects: Project[] = [
     technologies: ["Databricks", "PySpark", "MLflow", "XGBoost", "Seaborn", "Matplotlib", "Plotly"]
   },
   {
-    id: "nlp-sentiment",
-    title: "NLP Sentiment Analysis",
-    description: "Natural language processing project analyzing sentiment in social media data using transformer models.",
-    tags: ["Python", "PyTorch", "BERT"],
-    github: "https://github.com/yourusername/project3",
-    longDescription: "A sophisticated NLP system that analyzes sentiment in social media posts using state-of-the-art transformer models. The system can process large volumes of text data and provide detailed sentiment insights.",
+    id: "food-desert",
+    title: "Food Desert Prediction using CNN and Tree Models",
+    description: "Machine learning project processing large amounts of images and tabular data to predict food desert areas using CNN and tree-based models.",
+    tags: ["Python", "CNN", "Machine Learning"],
+    github: "https://github.com/yourusername/food-desert",
+    longDescription: "An advanced machine learning project that combines image processing with tabular data analysis to predict whether geographic areas qualify as food deserts. The project leverages both Convolutional Neural Networks for image analysis and tree-based models for structured data.",
     features: [
-      "Multi-class sentiment classification",
-      "Entity recognition and extraction",
-      "Emotion detection beyond positive/negative",
-      "Batch processing for large datasets",
-      "Fine-tuned BERT models for accuracy",
-      "API for real-time sentiment analysis"
+      "Large-scale image data processing and augmentation",
+      "Convolutional Neural Network architecture design",
+      "Tree-based model implementation (Random Forest, XGBoost)",
+      "Multi-modal data fusion techniques",
+      "Model ensemble and comparison",
+      "Geographic prediction and visualization"
     ],
-    technologies: ["Python", "PyTorch", "Transformers", "BERT", "FastAPI", "MongoDB"]
-  },
-  {
-    id: "etl-pipeline",
-    title: "ETL Data Pipeline",
-    description: "Scalable ETL pipeline processing large datasets with Apache Spark and cloud infrastructure.",
-    tags: ["Spark", "AWS", "Python"],
-    github: "https://github.com/yourusername/project4",
-    longDescription: "A robust ETL pipeline designed to handle large-scale data processing in the cloud. The system efficiently extracts data from multiple sources, transforms it according to business rules, and loads it into data warehouses for analysis.",
-    features: [
-      "Distributed data processing with Apache Spark",
-      "Support for multiple data sources and formats",
-      "Data quality validation and cleansing",
-      "Incremental data loading",
-      "Error handling and recovery mechanisms",
-      "Scheduled job execution and monitoring"
-    ],
-    technologies: ["Apache Spark", "Python", "AWS S3", "AWS Glue", "PostgreSQL", "Airflow"]
+    technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "XGBoost", "OpenCV"]
   },
   {
     id: "nyc-collision",
@@ -112,21 +95,21 @@ export const projects: Project[] = [
     technologies: ["R", "RStudio", "ggplot2", "dplyr", "tidyr", "Linear Regression"]
   },
   {
-    id: "food-desert",
-    title: "Food Desert Prediction using CNN and Tree Models",
-    description: "Machine learning project processing large amounts of images and tabular data to predict food desert areas using CNN and tree-based models.",
-    tags: ["Python", "CNN", "Machine Learning"],
-    github: "https://github.com/yourusername/food-desert",
-    longDescription: "An advanced machine learning project that combines image processing with tabular data analysis to predict whether geographic areas qualify as food deserts. The project leverages both Convolutional Neural Networks for image analysis and tree-based models for structured data.",
+    id: "nlp-sentiment",
+    title: "NLP Sentiment Analysis",
+    description: "Natural language processing project analyzing sentiment in social media data using transformer models.",
+    tags: ["Python", "PyTorch", "BERT"],
+    github: "https://github.com/yourusername/project3",
+    longDescription: "A sophisticated NLP system that analyzes sentiment in social media posts using state-of-the-art transformer models. The system can process large volumes of text data and provide detailed sentiment insights.",
     features: [
-      "Large-scale image data processing and augmentation",
-      "Convolutional Neural Network architecture design",
-      "Tree-based model implementation (Random Forest, XGBoost)",
-      "Multi-modal data fusion techniques",
-      "Model ensemble and comparison",
-      "Geographic prediction and visualization"
+      "Multi-class sentiment classification",
+      "Entity recognition and extraction",
+      "Emotion detection beyond positive/negative",
+      "Batch processing for large datasets",
+      "Fine-tuned BERT models for accuracy",
+      "API for real-time sentiment analysis"
     ],
-    technologies: ["Python", "TensorFlow", "Keras", "Scikit-learn", "XGBoost", "OpenCV"]
+    technologies: ["Python", "PyTorch", "Transformers", "BERT", "FastAPI", "MongoDB"]
   },
   {
     id: "flight-delay",
@@ -144,5 +127,22 @@ export const projects: Project[] = [
       "Details coming soon"
     ],
     technologies: ["PySpark", "Databricks", "Python", "SQL", "Delta Lake", "MLlib"]
+  },
+  {
+    id: "etl-pipeline",
+    title: "ETL Data Pipeline",
+    description: "Scalable ETL pipeline processing large datasets with Apache Spark and cloud infrastructure.",
+    tags: ["Spark", "AWS", "Python"],
+    github: "https://github.com/yourusername/project4",
+    longDescription: "A robust ETL pipeline designed to handle large-scale data processing in the cloud. The system efficiently extracts data from multiple sources, transforms it according to business rules, and loads it into data warehouses for analysis.",
+    features: [
+      "Distributed data processing with Apache Spark",
+      "Support for multiple data sources and formats",
+      "Data quality validation and cleansing",
+      "Incremental data loading",
+      "Error handling and recovery mechanisms",
+      "Scheduled job execution and monitoring"
+    ],
+    technologies: ["Apache Spark", "Python", "AWS S3", "AWS Glue", "PostgreSQL", "Airflow"]
   }
 ];
