@@ -83,9 +83,7 @@ const About = () => {
             <div className="relative grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 md:order-1">
                 <h3 className="text-2xl font-semibold text-primary">Started my Journey with MIDS program</h3>
-                <p className="text-foreground/90 leading-relaxed">
-                  What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems. Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies.Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, I've developed expertise in transforming complex data into actionable insights that drive decision-making.
-                </p>
+                <p className="text-foreground/90 leading-relaxed">My curiosity about data quickly turned into a passion for leveraging it to solve real-world problems. Currently pursuing a MIDS degree at UC Berkeley, I focus on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies. Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, I've developed expertise in transforming complex data into actionable insights that drive decision-making.</p>
               </div>
               <div className="relative md:order-2">
                 <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
