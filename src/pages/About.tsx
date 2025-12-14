@@ -1,20 +1,12 @@
 import { Card } from "@/components/ui/card";
-import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown, Github, Linkedin, Mail } from "lucide-react";
-import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { Database, Brain, Code2, TrendingUp, ChefHat, Github, Linkedin, Mail } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import aboutHeroImage from "@/assets/about-hero.jpg";
 import immersionImage from "@/assets/immersion.jpg";
 import profileImage from "@/assets/profile.png";
-const About = () => {
-  const scrollProgress = useScrollProgress();
 
-  // Calculate opacities based on scroll progress
-  const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
-  const imageScale = 1 + scrollProgress * 0.1;
-  const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
-  const contentTranslateY = Math.max(0, 30 - scrollProgress * 60);
+const About = () => {
   const skills = [{
     icon: Brain,
     title: "Machine Learning",
@@ -32,41 +24,8 @@ const About = () => {
     title: "Analytics",
     description: "Statistical analysis and data visualization"
   }];
-  return <div className="relative">
-      {/* Hero Image Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden" style={{
-      opacity: imageOpacity,
-      transform: `scale(${imageScale})`,
-      transition: 'transform 0.1s ease-out'
-    }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
-        
-        <div className="relative z-10 flex flex-col items-center gap-8 w-full">
-          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
-            <img alt="About Me" src={aboutHeroImage} className="w-full h-auto border-0 opacity-85 object-cover" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center px-8">
-                <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">About Me</h1>
-                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Passionate about leveraging data to solve complex problems
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {scrollProgress < 0.2 && <div className="animate-bounce">
-              <ChevronDown className="w-8 h-8 text-muted-foreground" />
-            </div>}
-        </div>
-      </section>
 
-      {/* Content Section */}
-      <section className="min-h-screen flex items-start justify-center px-4 -mt-screen pt-16" style={{
-      opacity: contentOpacity,
-      transform: `translateY(${contentTranslateY}px)`,
-      transition: 'transform 0.1s ease-out'
-    }}>
-
+  return <div className="pt-20">
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
         {/* Welcome Section with Profile */}
@@ -209,10 +168,8 @@ const About = () => {
               </div>
             </div>
           </Card>
-          <img src={immersionImage} alt="Immersion event" className="w-full h-auto rounded-lg shadow-lg" />
         </div>
       </div>
-      </section>
     </div>;
 };
 export default About;
