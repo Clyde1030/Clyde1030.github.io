@@ -67,7 +67,7 @@ const About = () => {
               <div className="relative">
                 <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
                 <Card className="p-6 bg-card border-border overflow-hidden">
-                  <img src="/lovable-uploads/e261f6f4-40a1-4cf7-a6ee-9173de814fe3.png" alt="Building projects" className="w-full h-64 object-cover rounded-lg" />
+                  <img alt="Building projects" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/110ab2e8-3b5d-4360-8ca2-62b5c8527f8c.jpg" />
                 </Card>
               </div>
               <div className="space-y-4">
