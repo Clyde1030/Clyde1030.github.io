@@ -352,6 +352,17 @@ const ProjectDetail = () => {
                   View on GitHub
                 </Button>
               </a>
+              {project.id === "data-viz-dashboard" && (
+                <a 
+                  href="https://github.com/Clyde1030/Flight-Delay-Prediction/blob/main/Project%20Phase%203.html" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    View Paper
+                  </Button>
+                </a>
+              )}
             </div>
           </div>
 
