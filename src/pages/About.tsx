@@ -163,7 +163,7 @@ const About = () => {
                     <img alt="Dish 9" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/72478604-c384-4995-91aa-7b9fb50a188d.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 10" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <img alt="Dish 10" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/1e44d738-1862-4dac-ba1c-90159c4d9d05.jpg" />
                   </div>
                 </div>
               </div>
