@@ -2,10 +2,8 @@ import { Card } from "@/components/ui/card";
 import { ChefHat } from "lucide-react";
 import aboutHeroImage from "@/assets/about-hero.jpg";
 import immersionImage from "@/assets/immersion.jpg";
-
 const About = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Image Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
@@ -41,10 +39,8 @@ const About = () => {
                 </Card>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-primary">The Beginning</h3>
-                <p className="text-foreground/90 leading-relaxed">
-                  I am from Taiwan. I began my professional path as an actuarial student, passing three actuarial exams while working at an insurance company in Portland, Oregon. During this time, I became increasingly interested in the tools and technologies that powered our financial reporting processes. While my initial focus was on actuarial modeling, I found myself fascinated by the behind-the-scenes systems that made everything run — from Python scripts and SQL queries to VBA macros automating Excel reports. 
-                </p>
+                <h3 className="text-2xl font-semibold text-primary">Houbi Taiwan is where I am from</h3>
+                <p className="text-foreground/90 leading-relaxed">I am originally from Houbi District, Taiwan, a region surrounded by green rice fields and shaped by a long tradition of agriculture. I moved to California with my family in 2016.</p>
               </div>
             </div>
 
@@ -54,8 +50,9 @@ const About = () => {
             {/* Timeline Item 2 - Image Right */}
             <div className="relative grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 md:order-1">
-                <h3 className="text-2xl font-semibold text-primary">Education & Growth</h3>
-                <p className="text-foreground/90 leading-relaxed">My journey in data science began with a fascination for uncovering patterns in complex datasets. What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems. Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies.</p>
+                <h3 className="text-2xl font-semibold text-primary">UCSB and the Actuarial field</h3>
+                <p className="text-foreground/90 leading-relaxed">I began my professional path as an actuarial student, passing three actuarial exams while working at an insurance company in Portland, Oregon. During this time, I became increasingly interested in the tools and technologies that powered our financial reporting processes. While my initial focus was on actuarial modeling, I found myself fascinated by the behind-the-scenes systems that made everything run — from Python scripts and SQL queries to VBA macros automating Excel reports.
+My journey in data science began with a fascination for uncovering patterns in complex datasets. What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems. Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies.</p>
               </div>
               <div className="relative md:order-2">
                 <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
@@ -77,7 +74,7 @@ const About = () => {
                 </Card>
               </div>
               <div className="space-y-4">
-                <h3 className="text-2xl font-semibold text-primary">Hands-On Experience</h3>
+                <h3 className="text-2xl font-semibold text-primary">Data Science Journey with MIDS</h3>
                 <p className="text-foreground/90 leading-relaxed">
                   Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, 
                   I've developed expertise in transforming complex data into actionable insights that drive decision-making.
@@ -115,8 +112,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
