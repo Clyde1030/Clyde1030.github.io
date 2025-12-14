@@ -73,8 +73,7 @@ const About = () => {
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-primary">Data Science Journey with MIDS</h3>
                 <p className="text-foreground/90 leading-relaxed">
-                  Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, 
-                  I've developed expertise in transforming complex data into actionable insights that drive decision-making.
+                  While my initial focus was on actuarial modeling, I found myself fascinated by the behind-the-scenes systems that made everything run — from Python scripts and SQL queries to VBA macros automating Excel reports. My journey in data science began with a fascination for uncovering patterns in complex datasets. What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems. Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies.Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, I've developed expertise in transforming complex data into actionable insights that drive decision-making.
                 </p>
               </div>
             </div>
