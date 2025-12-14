@@ -1,8 +1,12 @@
 import { Card } from "@/components/ui/card";
-import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown } from "lucide-react";
+import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import aboutHeroImage from "@/assets/about-hero.jpg";
 import immersionImage from "@/assets/immersion.jpg";
+import profileImage from "@/assets/profile.png";
 const About = () => {
   const scrollProgress = useScrollProgress();
 
@@ -65,7 +69,46 @@ const About = () => {
 
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
-        {/* Skills & Expertise Section - Moved to Top */}
+        {/* Welcome Section with Profile */}
+        <div className="text-center space-y-8">
+          <div className="flex justify-center mb-6">
+            <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
+              <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
+              <AvatarFallback>DS</AvatarFallback>
+            </Avatar>
+          </div>
+
+          <div className="max-w-2xl mx-auto space-y-4">
+            <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
+          </div>
+
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Link to="/projects">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
+                View Projects
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                Get in Touch
+              </Button>
+            </Link>
+          </div>
+
+          <div className="flex gap-6 justify-center pt-8">
+            <a href="https://github.com/Clyde1030" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Github className="w-6 h-6" />
+            </a>
+            <a href="https://www.linkedin.com/in/yushengclydelee/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <Linkedin className="w-6 h-6" />
+            </a>
+            <a href="mailto:yushenglee@berkeley.edu" className="text-muted-foreground hover:text-primary transition-colors">
+              <Mail className="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+
+        {/* Skills & Expertise Section */}
         <div>
           <h2 className="text-3xl font-semibold mb-8 text-center">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
