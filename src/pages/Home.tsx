@@ -1,10 +1,29 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, Database, Brain, Code2, TrendingUp } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/background.jpg";
 import profileImage from "@/assets/profile.png";
+
+const skills = [{
+  icon: Brain,
+  title: "Machine Learning",
+  description: "Building predictive models and implementing ML algorithms"
+}, {
+  icon: Database,
+  title: "Data Engineering",
+  description: "Designing and optimizing data pipelines and architectures"
+}, {
+  icon: Code2,
+  title: "Programming",
+  description: "Python, R, SQL, and modern data science tools"
+}, {
+  icon: TrendingUp,
+  title: "Analytics",
+  description: "Statistical analysis and data visualization"
+}];
 const Home = () => {
   const scrollProgress = useScrollProgress();
 
@@ -59,7 +78,27 @@ const Home = () => {
             <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
           </div>
 
-          <div className="flex gap-4 justify-center flex-wrap">
+          {/* Skills & Expertise Section */}
+          <div className="w-full bg-white rounded-xl p-8 mt-8">
+            <h2 className="text-3xl font-semibold mb-8 text-center text-foreground">Skills & Expertise</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {skills.map(skill => (
+                <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <skill.icon className="w-6 h-6" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-semibold text-foreground">{skill.title}</h3>
+                      <p className="text-muted-foreground">{skill.description}</p>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex gap-4 justify-center flex-wrap pt-4">
             <Link to="/projects">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
                 View Projects
