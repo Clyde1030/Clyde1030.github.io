@@ -22,18 +22,18 @@ const Projects = () => {
             </div>
             
             {/* Name & Title */}
-            <div className="text-center space-y-1">
+            <div className="space-y-1">
               <h3 className="text-lg font-semibold text-foreground">Clyde Lee</h3>
               <p className="text-sm text-muted-foreground">Data Scientist & Engineer</p>
             </div>
             
             {/* Social Links */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <a 
                 href="https://www.linkedin.com/in/yushengclydelee/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
                 <span className="text-sm">LinkedIn</span>
@@ -42,7 +42,7 @@ const Projects = () => {
                 href="https://github.com/Clyde1030" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Github className="w-4 h-4" />
                 <span className="text-sm">GitHub</span>
