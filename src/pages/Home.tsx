@@ -4,50 +4,40 @@ import { Github, Linkedin, Mail, Database, Brain, Code2, TrendingUp, Cloud } fro
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import profileImage from "@/assets/profile2.png";
-
-const skills = [
-  {
-    icon: Brain,
-    title: "Machine Learning",
-    description: "Building predictive models and implementing ML algorithms",
-  },
-  {
-    icon: Database,
-    title: "Data Engineering",
-    description: "Designing and optimizing data pipelines and architectures",
-  },
-  {
-    icon: Code2,
-    title: "Programming",
-    description: "Python, R, SQL, and modern data science tools",
-  },
-  {
-    icon: TrendingUp,
-    title: "Analytics",
-    description: "Statistical analysis and data visualization",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Platform",
-    description: "Building cloud infrastructure on AWS, GCP. Leveraging IaC like Terraform",
-  },
-];
-
+const skills = [{
+  icon: Brain,
+  title: "Machine Learning",
+  description: "Building predictive models and implementing ML algorithms"
+}, {
+  icon: Database,
+  title: "Data Engineering",
+  description: "Designing and optimizing data pipelines and architectures"
+}, {
+  icon: Code2,
+  title: "Programming",
+  description: "Python, R, SQL, and modern data science tools"
+}, {
+  icon: TrendingUp,
+  title: "Analytics",
+  description: "Statistical analysis and data visualization"
+}, {
+  icon: Cloud,
+  title: "Cloud Platform",
+  description: "Building cloud infrastructure on AWS, GCP. Leveraging IaC like Terraform"
+}];
 const Home = () => {
-  return (
-    <div className="relative">
+  return <div className="relative">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
 
         <div className="relative z-10 flex flex-col items-center gap-8 w-full">
-          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]" style={{ maxHeight: "90%" }}>
-            <img
-              alt="Data Science Workspace"
-              className="w-full h-auto border-0 opacity-85 object-cover object-top"
-              src="/lovable-uploads/fd56ed54-d3cf-4adb-9750-4abcc3b7d01f.png"
-              style={{ marginBottom: "-10%" }}
-            />
+          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]" style={{
+          maxHeight: "90%"
+        }}>
+            <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-cover object-top" src="/lovable-uploads/fd56ed54-d3cf-4adb-9750-4abcc3b7d01f.png" style={{
+            marginBottom: "-10%"
+          }} />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
                 <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
@@ -79,7 +69,10 @@ const Home = () => {
 
           <div className="max-w-2xl mx-auto space-y-4">
             <p className="text-lg text-foreground/90">
-              Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.
+              
+Yu-Sheng believes in using data to make better decisions and leveraging modern technology to boost productivity. His goal is to make technology and the underlying machine learning techniques more accessible and easier for people to understand and apply in practice.
+
+Yu-Sheng previously worked as a business data analyst in the insurance industry. During a career break, he is pursuing a Master’s degree at the School of Information at UC Berkeley.
             </p>
           </div>
 
@@ -87,8 +80,7 @@ const Home = () => {
           <div className="w-full bg-white rounded-xl p-8 mt-8">
             <h2 className="text-3xl font-semibold mb-8 text-center text-foreground">Skills & Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {skills.map((skill) => (
-                <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
+              {skills.map(skill => <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                       <skill.icon className="w-6 h-6" />
@@ -98,8 +90,7 @@ const Home = () => {
                       <p className="text-muted-foreground">{skill.description}</p>
                     </div>
                   </div>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
@@ -129,8 +120,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
