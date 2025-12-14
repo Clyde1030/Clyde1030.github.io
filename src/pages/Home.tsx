@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Mail, Database, Brain, Code2, TrendingUp } from "lucide-react";
+import { Github, Linkedin, Mail, Database, Brain, Code2, TrendingUp, Cloud } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import profileImage from "@/assets/profile2.png";
@@ -25,6 +25,11 @@ const skills = [
     icon: TrendingUp,
     title: "Analytics",
     description: "Statistical analysis and data visualization",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Platform",
+    description: "Building cloud infrastructure on AWS, GCP. Leveraging IaC like Terraform",
   },
 ];
 
@@ -81,7 +86,7 @@ const Home = () => {
           {/* Skills & Expertise Section */}
           <div className="w-full bg-white rounded-xl p-8 mt-8">
             <h2 className="text-3xl font-semibold mb-8 text-center text-foreground">Skills & Expertise</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skills.map((skill) => (
                 <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
                   <div className="flex items-start gap-4">
