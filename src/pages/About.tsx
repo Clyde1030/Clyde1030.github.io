@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown } from "lucide-react";
+import { ChefHat, ChevronDown } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 import aboutHeroImage from "@/assets/about-hero.jpg";
 import immersionImage from "@/assets/immersion.jpg";
@@ -11,23 +11,6 @@ const About = () => {
   const imageScale = 1 + scrollProgress * 0.1;
   const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
   const contentTranslateY = Math.max(0, 30 - scrollProgress * 60);
-  const skills = [{
-    icon: Brain,
-    title: "Machine Learning",
-    description: "Building predictive models and implementing ML algorithms"
-  }, {
-    icon: Database,
-    title: "Data Engineering",
-    description: "Designing and optimizing data pipelines and architectures"
-  }, {
-    icon: Code2,
-    title: "Programming",
-    description: "Python, R, SQL, and modern data science tools"
-  }, {
-    icon: TrendingUp,
-    title: "Analytics",
-    description: "Statistical analysis and data visualization"
-  }];
   return <div className="relative">
       {/* Hero Image Section */}
       <section className="h-screen flex items-center justify-center relative overflow-hidden" style={{
@@ -65,24 +48,6 @@ const About = () => {
 
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
-        {/* Skills & Expertise Section - Moved to Top */}
-        <div>
-          <h2 className="text-3xl font-semibold mb-8 text-center">Skills & Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map(skill => <Card key={skill.title} className="p-6 bg-card border-border hover:border-primary transition-colors group">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <skill.icon className="w-6 h-6" />
-                  </div>
-                  <div className="space-y-2">
-                    <h3 className="text-xl font-semibold">{skill.title}</h3>
-                    <p className="text-muted-foreground">{skill.description}</p>
-                  </div>
-                </div>
-              </Card>)}
-          </div>
-        </div>
-
         {/* My Story Timeline Section */}
         <div className="space-y-8">
           <h2 className="text-3xl font-semibold text-center mb-12">My Story</h2>
