@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import immersionImage from "@/assets/immersion.jpg";
 import profileImage from "@/assets/profile.png";
+import welcomeBg from "@/assets/welcome-bg.jpg";
 
 const About = () => {
   const skills = [{
@@ -29,16 +30,27 @@ const About = () => {
       {/* Main content */}
       <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
         {/* Welcome Section with Profile */}
-        <div className="text-center space-y-8">
-          <div className="flex justify-center mb-6">
-            <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
-              <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
-              <AvatarFallback>DS</AvatarFallback>
-            </Avatar>
-          </div>
+        <div className="relative rounded-2xl overflow-hidden">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${welcomeBg})` }}
+          />
+          {/* Fade Overlay */}
+          <div className="absolute inset-0 bg-background/70" />
+          
+          {/* Content */}
+          <div className="relative text-center space-y-8 py-16 px-8">
+            <div className="flex justify-center mb-6">
+              <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
+                <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
+                <AvatarFallback>DS</AvatarFallback>
+              </Avatar>
+            </div>
 
-          <div className="max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
+            <div className="max-w-2xl mx-auto space-y-4">
+              <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
+            </div>
           </div>
         </div>
 
