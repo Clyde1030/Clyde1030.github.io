@@ -49,6 +49,11 @@ const Home = () => {
                 <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                   Transforming data into actionable insights
                 </p>
+                <Link to="/about">
+                  <Button size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
+                    About Me
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
