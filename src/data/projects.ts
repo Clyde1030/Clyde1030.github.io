@@ -30,19 +30,18 @@ export const projects: Project[] = [
   {
     id: "data-viz-dashboard",
     title: "Flight Delay Analysis",
-    description: "Big data analysis project using PySpark and Databricks to analyze flight delay patterns.",
-    tags: ["React", "D3.js", "PostgreSQL"],
-    github: "https://github.com/yourusername/project2",
-    longDescription: "An interactive dashboard that provides real-time visualization of complex datasets. Built with modern web technologies to deliver a responsive and intuitive user experience for data exploration and analysis.",
+    description: "Predict departure delay with multiple ML models - XGBoost, Random Forest, Logistic Regression, and Multilayer Perceptron.",
+    tags: ["Databricks", "PySpark"],
+    github: "https://github.com/Clyde1030/Flight-Delay-Prediction",
+    longDescription: "A big data analysis project using PySpark and Databricks to predict flight departure delays. The project handles 31M records with 200+ fields, implementing multiple machine learning models including XGBoost, Random Forest, Logistic Regression, and Multilayer Perceptron Neural Network.",
     features: [
-      "Real-time data updates and visualization",
-      "Multiple chart types and customization options",
-      "Interactive filtering and drill-down capabilities",
-      "Export functionality for reports",
-      "Responsive design for all devices",
-      "User authentication and role-based access"
+      "Handle large data with 31M records and 200+ fields",
+      "Derive Graph-Based features using PageRank algorithm",
+      "Time Series Analysis and derive time-based features",
+      "Implement 4 ML models: Logistic Regression, Random Forest, XGBoost, and Multilayer Perceptron Neural Network",
+      "Data visualization with seaborn, matplotlib, and plotly"
     ],
-    technologies: ["React", "TypeScript", "D3.js", "PostgreSQL", "Node.js", "WebSocket"]
+    technologies: ["Databricks", "PySpark", "MLflow", "XGBoost", "Seaborn", "Matplotlib", "Plotly"]
   },
   {
     id: "nlp-sentiment",
