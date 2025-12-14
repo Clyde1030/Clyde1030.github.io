@@ -70,9 +70,7 @@ const Home = () => {
           <div className="max-w-2xl mx-auto space-y-4">
             <p className="text-lg text-foreground/90">
               
-Yu-Sheng believes in using data to make better decisions and leveraging modern technology to boost productivity. His goal is to make technology and the underlying machine learning techniques more accessible and easier for people to understand and apply in practice.
-
-Yu-Sheng previously worked as a business data analyst in the insurance industry. During a career break, he is pursuing a Master’s degree at the School of Information at UC Berkeley.
+Yu-Sheng (Clyde) believes in using data to make better decisions and leveraging modern technology to boost productivity. His goal is to make technology and the underlying machine learning techniques more accessible and easier for people to understand and to apply in practice. He previously worked as a data analyst in the insurance industry. During his career break, he is pursuing a Master’s degree at the School of Information at UC Berkeley.
             </p>
           </div>
 
