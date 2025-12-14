@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Github } from "lucide-react";
+import { ArrowLeft, Github, FileText } from "lucide-react";
 import { projects } from "@/data/projects";
 import {
   Carousel,
@@ -354,11 +354,12 @@ const ProjectDetail = () => {
               </a>
               {project.id === "data-viz-dashboard" && (
                 <a 
-                  href="https://github.com/Clyde1030/Flight-Delay-Prediction/blob/main/Project%20Phase%203.html" 
+                  href="https://github.com/Clyde1030/Flight-Delay-Prediction/blob/main/Project%20Phase%203.ipynb" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                    <FileText className="w-4 h-4 mr-2" />
                     View Paper
                   </Button>
                 </a>
