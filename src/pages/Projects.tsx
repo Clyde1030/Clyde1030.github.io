@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "@/data/projects";
-import profileImage from "@/assets/profile.png";
+import profileImage from "@/assets/profile2.png";
 
 const Projects = () => {
   return (
