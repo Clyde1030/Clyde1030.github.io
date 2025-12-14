@@ -49,7 +49,7 @@ const About = () => {
             <div className="relative grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 md:order-1">
                 <h3 className="text-2xl font-semibold text-primary">UCSB and the Actuarial field</h3>
-                <p className="text-foreground/90 leading-relaxed">After graduating from UC Santa Barbara, I began my professional path as an actuarial student. I passed 3 actuarial exams while working at an insurance company in Portland, Oregon. During this time, I became increasingly interested in the tools and technologies that powered our financial reporting processes. </p>
+                <p className="text-foreground/90 leading-relaxed">After graduating from UC Santa Barbara, I began my professional path as an actuarial student. I passed 3 actuarial exams while working at insurance companies located in Portland, Oregon, and St. Louis, MO. During this time, I became increasingly interested in the tools and technologies that powered our financial reporting processes. </p>
               </div>
               <div className="relative md:order-2">
                 <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
