@@ -130,9 +130,7 @@ const About = () => {
                       When I'm not analyzing data or training models, you'll find me in the kitchen experimenting with new recipes and flavors. 
                     </p>
                     <p className="text-foreground/90 leading-relaxed">
-                      I particularly enjoy exploring international cuisines and the science behind cooking techniques. 
-                      From understanding the Maillard reaction to perfecting fermentation processes, cooking provides 
-                      a delicious intersection of art and science that keeps me engaged outside of my professional work.
+                      ​I enjoy exploring international cuisines! From understanding the Maillard reaction to perfecting fermentation processes, cooking provides a delicious intersection of art and science that keeps me engaged outside of my professional work.
                     </p>
                   </div>
                 </div>
