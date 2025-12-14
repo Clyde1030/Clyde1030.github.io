@@ -82,11 +82,9 @@ const About = () => {
             {/* Timeline Item 4 - Image Right */}
             <div className="relative grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4 md:order-1">
-                <h3 className="text-2xl font-semibold text-primary">Internship & Experiences</h3>
+                <h3 className="text-2xl font-semibold text-primary">Started my Journey with MIDS program</h3>
                 <p className="text-foreground/90 leading-relaxed">
-                  Throughout my journey, I've had the opportunity to apply my skills in real-world settings. 
-                  From data analysis internships to collaborative research projects, each experience has 
-                  deepened my understanding of how data science creates tangible impact in various industries.
+                  What started as curiosity quickly transformed into a passion for leveraging data to solve real-world problems. Currently pursuing studies in Data Science, focusing on advanced statistical methods, machine learning algorithms, and modern data engineering practices. My coursework includes deep learning, natural language processing, and big data technologies.Through various projects in machine learning pipelines, data visualization dashboards, and NLP applications, I've developed expertise in transforming complex data into actionable insights that drive decision-making.
                 </p>
               </div>
               <div className="relative md:order-2">
