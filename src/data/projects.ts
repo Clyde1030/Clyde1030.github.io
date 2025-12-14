@@ -30,7 +30,7 @@ export const projects: Project[] = [
   {
     id: "data-viz-dashboard",
     title: "Flight Delay Analysis",
-    description: "Interactive dashboard for real-time data visualization and analytics using modern web technologies.",
+    description: "Big data analysis project using PySpark and Databricks to analyze flight delay patterns.",
     tags: ["React", "D3.js", "PostgreSQL"],
     github: "https://github.com/yourusername/project2",
     longDescription: "An interactive dashboard that provides real-time visualization of complex datasets. Built with modern web technologies to deliver a responsive and intuitive user experience for data exploration and analysis.",
