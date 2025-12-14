@@ -41,8 +41,8 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8 w-full">
-          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
-            <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-cover" src="/lovable-uploads/fd56ed54-d3cf-4adb-9750-4abcc3b7d01f.png" />
+          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]" style={{ maxHeight: '90%' }}>
+            <img alt="Data Science Workspace" className="w-full h-auto border-0 opacity-85 object-cover object-top" src="/lovable-uploads/fd56ed54-d3cf-4adb-9750-4abcc3b7d01f.png" style={{ marginBottom: '-10%' }} />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
                 <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Your Next Data Scientist</h2>
