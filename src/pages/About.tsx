@@ -77,6 +77,49 @@ const About = () => {
                 </p>
               </div>
             </div>
+
+            {/* Timeline connector line */}
+            <div className="hidden md:block w-0.5 h-16 bg-primary/30 mx-auto" />
+
+            {/* Timeline Item 4 - Image Right */}
+            <div className="relative grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-4 md:order-1">
+                <h3 className="text-2xl font-semibold text-primary">Internship & Experiences</h3>
+                <p className="text-foreground/90 leading-relaxed">
+                  Throughout my journey, I've had the opportunity to apply my skills in real-world settings. 
+                  From data analysis internships to collaborative research projects, each experience has 
+                  deepened my understanding of how data science creates tangible impact in various industries.
+                </p>
+              </div>
+              <div className="relative md:order-2">
+                <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+                <Card className="p-6 bg-card border-border overflow-hidden">
+                  <img alt="Internship experience" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/bd7abfaa-e239-4426-b764-19c6b2ca548b.jpg" />
+                </Card>
+              </div>
+            </div>
+
+            {/* Timeline connector line */}
+            <div className="hidden md:block w-0.5 h-16 bg-primary/30 mx-auto" />
+
+            {/* Timeline Item 5 - Image Left */}
+            <div className="relative grid md:grid-cols-2 gap-8 items-center">
+              <div className="relative">
+                <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
+                <Card className="p-6 bg-card border-border overflow-hidden">
+                  <img alt="Future goals" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/dd08ea1c-9efc-474a-9f7c-ade41fe6829e.jpg" />
+                </Card>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-2xl font-semibold text-primary">Future Goals</h3>
+                <p className="text-foreground/90 leading-relaxed">
+                  Looking ahead, I aim to bridge the gap between data science and engineering, 
+                  building scalable systems that turn insights into action. I'm passionate about 
+                  leveraging AI and machine learning to solve complex problems and create meaningful 
+                  impact in the tech industry.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Beyond Data Section - At Bottom */}
