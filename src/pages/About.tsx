@@ -26,18 +26,18 @@ const About = () => {
     description: "Statistical analysis and data visualization"
   }];
 
-  return <div className="pt-20">
+  return <div className="pt-16">
       {/* Main content */}
-      <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
+      <div className="container mx-auto max-w-5xl space-y-16 px-4 py-8">
         {/* Welcome Section with Profile */}
-        <div className="relative rounded-2xl overflow-hidden">
+        <div className="relative rounded-2xl overflow-hidden -mx-4 -mt-8">
           {/* Background Image */}
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${welcomeBg})` }}
           />
           {/* Fade Overlay */}
-          <div className="absolute inset-0 bg-background/70" />
+          <div className="absolute inset-0 bg-background/40" />
           
           {/* Content */}
           <div className="relative text-center space-y-8 py-16 px-8">
