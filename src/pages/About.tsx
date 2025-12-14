@@ -90,7 +90,7 @@ const About = () => {
               <div className="relative md:order-2">
                 <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
                 <Card className="p-6 bg-card border-border overflow-hidden">
-                  <img alt="Internship experience" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/bd7abfaa-e239-4426-b764-19c6b2ca548b.jpg" />
+                  <img alt="Internship experience" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/0bf97a87-6640-432a-8fb2-59f0760f51a6.jpg" />
                 </Card>
               </div>
             </div>
