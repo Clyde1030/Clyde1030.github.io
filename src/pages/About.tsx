@@ -154,13 +154,13 @@ const About = () => {
                     <img alt="Dish 6" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/4eb70d69-fdc6-46ce-96e9-f9867b6ebee4.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img alt="Dish 7" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/6a8d0aed-8c31-45db-97a1-6455a651dcd0.jpg" />
+                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 7" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                     <img alt="Dish 8" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/41d623fc-9185-4094-8f8f-4b944fc0b901.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
-                    <img src="/lovable-uploads/placeholder.svg" alt="Dish 9" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                    <img alt="Dish 9" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src="/lovable-uploads/72478604-c384-4995-91aa-7b9fb50a188d.jpg" />
                   </div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-muted">
                     <img src="/lovable-uploads/placeholder.svg" alt="Dish 10" className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
