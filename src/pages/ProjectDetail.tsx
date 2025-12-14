@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import flightDelayDiagram from "@/assets/flight-delay-diagram.png";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -98,25 +99,15 @@ const ProjectDetail = () => {
     </div>
   );
 
-  // Layout 2: Carousel + Sections (for data-viz-dashboard)
+  // Layout 2: Carousel + Sections (for data-viz-dashboard / Flight Delay Analysis)
   const renderCarouselLayout = () => (
     <div className="space-y-8">
       <Card className="p-6 bg-card border-border">
-        <Carousel className="w-full">
-          <CarouselContent>
-            {dummyImages.map((img, index) => (
-              <CarouselItem key={index}>
-                <img 
-                  src={img} 
-                  alt={`Project screenshot ${index + 1}`} 
-                  className="w-full rounded-lg shadow-lg aspect-video object-cover"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+        <img 
+          src={flightDelayDiagram} 
+          alt="Flight Delay Analysis Pipeline Diagram" 
+          className="w-full rounded-lg shadow-lg"
+        />
       </Card>
 
       <div className="grid md:grid-cols-2 gap-6">
