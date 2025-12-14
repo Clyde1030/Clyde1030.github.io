@@ -90,7 +90,7 @@ const About = () => {
               <div className="relative md:order-2">
                 <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
                 <Card className="p-6 bg-card border-border overflow-hidden">
-                  <img alt="Internship experience" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/0bf97a87-6640-432a-8fb2-59f0760f51a6.jpg" />
+                  <img alt="Internship experience" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/5936409a-3fa3-427e-9680-aa720ea8e553.jpg" />
                 </Card>
               </div>
             </div>
@@ -103,7 +103,7 @@ const About = () => {
               <div className="relative">
                 <div className="absolute -right-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
                 <Card className="p-6 bg-card border-border overflow-hidden">
-                  <img alt="Future goals" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/68b298ce-291c-4538-8ab8-94be2f6431ba.jpg" />
+                  <img alt="Future goals" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/dd08ea1c-9efc-474a-9f7c-ade41fe6829e.jpg" />
                 </Card>
               </div>
               <div className="space-y-4">
