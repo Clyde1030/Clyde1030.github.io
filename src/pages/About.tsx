@@ -1,12 +1,16 @@
 import { Card } from "@/components/ui/card";
-import { Database, Brain, Code2, TrendingUp, ChefHat, Github, Linkedin, Mail } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Database, Brain, Code2, TrendingUp, ChefHat, ChevronDown } from "lucide-react";
+import { useScrollProgress } from "@/hooks/useScrollProgress";
+import aboutHeroImage from "@/assets/about-hero.jpg";
 import immersionImage from "@/assets/immersion.jpg";
-import profileImage from "@/assets/profile.png";
-import welcomeBg from "@/assets/welcome-bg.jpg";
 const About = () => {
+  const scrollProgress = useScrollProgress();
+
+  // Calculate opacities based on scroll progress
+  const imageOpacity = Math.max(0, 1 - scrollProgress * 2);
+  const imageScale = 1 + scrollProgress * 0.1;
+  const contentOpacity = Math.max(0, Math.min(1, (scrollProgress - 0.3) * 2));
+  const contentTranslateY = Math.max(0, 30 - scrollProgress * 60);
   const skills = [{
     icon: Brain,
     title: "Machine Learning",
@@ -24,34 +28,44 @@ const About = () => {
     title: "Analytics",
     description: "Statistical analysis and data visualization"
   }];
-  return <div className="pt-16">
-      {/* Main content */}
-      <div className="container mx-auto max-w-5xl space-y-16 px-4 py-8">
-        {/* Welcome Section with Profile */}
-        <div className="relative rounded-2xl overflow-hidden -mx-4 -mt-8">
-          {/* Background Image */}
-          <div style={{
-          backgroundImage: `url(${welcomeBg})`
-        }} className="absolute inset-0 bg-cover bg-center border-0 border-primary opacity-80" />
-          {/* Fade Overlay */}
-          <div className="absolute inset-0 bg-background/40" />
-          
-          {/* Content */}
-          <div className="relative text-center space-y-8 py-16 px-[64px] mx-0">
-            <div className="flex justify-center mb-6">
-              <Avatar className="h-80 w-80 border-4 border-primary/20 shadow-glow">
-                <AvatarImage src={profileImage} alt="Profile" className="object-cover object-[center_20%]" />
-                <AvatarFallback>DS</AvatarFallback>
-              </Avatar>
-            </div>
-
-            <div className="max-w-2xl mx-auto space-y-4">
-              <p className="text-lg text-foreground/90">Welcome to my portfolio. My name is Yu-Sheng Lee, and I go by Clyde. I'm a passionate data science student specializing in machine learning, data engineering, and analytical solutions.</p>
+  return <div className="relative">
+      {/* Hero Image Section */}
+      <section className="h-screen flex items-center justify-center relative overflow-hidden" style={{
+      opacity: imageOpacity,
+      transform: `scale(${imageScale})`,
+      transition: 'transform 0.1s ease-out'
+    }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        
+        <div className="relative z-10 flex flex-col items-center gap-8 w-full">
+          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
+            <img alt="About Me" src={aboutHeroImage} className="w-full h-auto border-0 opacity-85 object-cover" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center px-8">
+                <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">About Me</h1>
+                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  Passionate about leveraging data to solve complex problems
+                </p>
+              </div>
             </div>
           </div>
+          
+          {scrollProgress < 0.2 && <div className="animate-bounce">
+              <ChevronDown className="w-8 h-8 text-muted-foreground" />
+            </div>}
         </div>
+      </section>
 
-        {/* Skills & Expertise Section */}
+      {/* Content Section */}
+      <section className="min-h-screen flex items-start justify-center px-4 -mt-screen pt-16" style={{
+      opacity: contentOpacity,
+      transform: `translateY(${contentTranslateY}px)`,
+      transition: 'transform 0.1s ease-out'
+    }}>
+
+      {/* Main content */}
+      <div className="container mx-auto max-w-5xl space-y-16 px-4 py-16">
+        {/* Skills & Expertise Section - Moved to Top */}
         <div>
           <h2 className="text-3xl font-semibold mb-8 text-center">Skills & Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -127,7 +141,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Beyond Data Section */}
+        {/* Beyond Data Section - At Bottom */}
         <div className="space-y-6">
           <h2 className="text-3xl font-semibold text-center mb-8">Beyond Data</h2>
           <Card className="p-8 bg-card border-border">
@@ -152,36 +166,10 @@ const About = () => {
               </div>
             </div>
           </Card>
-        </div>
-
-        {/* CTA Section - Bottom */}
-        <div className="text-center space-y-8 pt-8">
-          <div className="flex gap-4 justify-center flex-wrap">
-            <Link to="/projects">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
-                View Projects
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                Get in Touch
-              </Button>
-            </Link>
-          </div>
-
-          <div className="flex gap-6 justify-center">
-            <a href="https://github.com/Clyde1030" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/yushengclydelee/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="mailto:yushenglee@berkeley.edu" className="text-muted-foreground hover:text-primary transition-colors">
-              <Mail className="w-6 h-6" />
-            </a>
-          </div>
+          <img src={immersionImage} alt="Immersion event" className="w-full h-auto rounded-lg shadow-lg" />
         </div>
       </div>
+      </section>
     </div>;
 };
 export default About;
