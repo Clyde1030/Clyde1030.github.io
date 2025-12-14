@@ -8,9 +8,9 @@ import profileImage from "@/assets/profile.png";
 const Projects = () => {
   return (
     <div className="min-h-screen px-4 py-16">
-      <div className="w-full max-w-6xl mx-auto flex gap-12">
+      <div className="w-full max-w-7xl mx-auto flex gap-8">
         {/* Left Sidebar */}
-        <aside className="hidden md:block w-64 flex-shrink-0">
+        <aside className="hidden md:block w-48 flex-shrink-0">
           <div className="sticky top-24 space-y-6">
             {/* Profile Photo */}
             <div>
@@ -53,7 +53,7 @@ const Projects = () => {
 
         {/* Main Content */}
         <main className="flex-1 space-y-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map(project => (
               <Card key={project.title} className="p-6 bg-card border-border hover:border-primary transition-all group">
                 <div className="space-y-4">
