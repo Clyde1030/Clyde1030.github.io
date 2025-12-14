@@ -50,9 +50,7 @@ const Home = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
                 <h2 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Hi! I'm Clyde</h2>
-                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  Transforming data into actionable insights
-                </p>
+                <p className="text-xl md:text-2xl text-white/90 mt-2 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"> I love transforming data! My work involves building data pipelines, creating effective models, and visualizing outcomes for clear action.</p>
                 <Link to="/about">
                   <Button size="lg" className="mt-6 bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow">
                     About Me
