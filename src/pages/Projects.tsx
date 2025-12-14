@@ -13,7 +13,7 @@ const Projects = () => {
         <aside className="hidden md:block w-64 flex-shrink-0">
           <div className="sticky top-24 space-y-6">
             {/* Profile Photo */}
-            <div className="flex justify-center">
+            <div>
               <img 
                 src={profileImage} 
                 alt="Profile" 
