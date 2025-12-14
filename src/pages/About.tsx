@@ -21,8 +21,8 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
         
         <div className="relative z-10 flex flex-col items-center gap-8 w-full">
-          <div className="relative w-full overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
-            <img alt="About Me" src={aboutHeroImage} className="w-full h-auto border-0 opacity-85 object-cover" />
+          <div className="relative w-full max-h-[70vh] overflow-hidden shadow-[0_0_60px_hsl(var(--primary)/0.3)]">
+            <img alt="About Me" src={aboutHeroImage} className="w-full h-full max-h-[70vh] border-0 opacity-85 object-cover object-center" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center px-8">
                 <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">About Me</h1>

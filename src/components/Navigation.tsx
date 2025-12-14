@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -20,9 +21,9 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto py-4 flex justify-between items-center px-4">
-        <div className="text-xl font-bold bg-gradient-primary bg-clip-text text-indigo-600">
+        <Link to="/" className="text-xl font-bold bg-gradient-primary bg-clip-text text-indigo-600 hover:opacity-80 transition-opacity">
           ClydeDataCraft
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8">
