@@ -29,7 +29,7 @@ export const projects: Project[] = [
   },
   {
     id: "data-viz-dashboard",
-    title: "Data Visualization Dashboard",
+    title: "Flight Delay Analysis",
     description: "Interactive dashboard for real-time data visualization and analytics using modern web technologies.",
     tags: ["React", "D3.js", "PostgreSQL"],
     github: "https://github.com/yourusername/project2",
