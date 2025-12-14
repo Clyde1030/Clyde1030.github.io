@@ -57,7 +57,7 @@ My journey in data science began with a fascination for uncovering patterns in c
               <div className="relative md:order-2">
                 <div className="absolute -left-4 top-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background hidden md:block z-10" />
                 <Card className="p-6 bg-card border-border overflow-hidden">
-                  <img alt="Learning and development" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/dd08ea1c-9efc-474a-9f7c-ade41fe6829e.jpg" />
+                  <img alt="Learning and development" className="w-full h-64 object-cover rounded-lg" src="/lovable-uploads/5672ad74-496d-40d7-af05-19ab6d4ba63a.jpg" />
                 </Card>
               </div>
             </div>
